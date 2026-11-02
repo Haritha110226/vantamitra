@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VantaMitra | వంటమిత్ర – Cooking Made Easy</title>
+<style>
+:root {
+  --green:#294b38;
+  --green2:#3e684d;
+  --cream:#faf7ef;
+  --white:#fffefa;
+  --orange:#c66d45;
+  --text:#29372d;
+  --muted:#777b70;
+  --border:#e9e4d8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:25px;font-weight:800;color:var(--green);letter-spacing:-1px}
+.logo span{color:var(--orange)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-right a{color:var(--text);text-decoration:none;font-size:14px;font-weight:600}
+.lang{border:1px solid var(--green);border-radius:22px;padding:8px 14px;background:white;color:var(--green);cursor:pointer;font-weight:700}
+.hero{max-width:1180px;margin:35px auto 25px;padding:0 22px}
+.hero-box{background:var(--green);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;min-height:350px}
+.hero-content{padding:48px 42px;color:white;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow{color:#e8bd8e;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:clamp(32px,4vw,49px);line-height:1.15;margin-bottom:16px}
+.hero p{color:#e5ebdf;max-width:470px;margin-bottom:25px;font-size:16px}
+.hero-btn{background:#e9b47c;color:#273d2e;border:0;border-radius:30px;padding:13px 23px;font-weight:800;cursor:pointer}
+.hero-image{min-height:300px;background:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85') center/cover}
+.container{max-width:1180px;margin:0 auto;padding:15px 22px 55px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:25px 0 18px}
+.section-heading h2{font-size:27px;color:var(--green)}
+.section-heading p{font-size:14px;color:var(--muted)}
+.search-row{display:flex;gap:12px;margin:18px 0;flex-wrap:wrap}
+.search{flex:1;min-width:220px;border:1px solid var(--border);background:white;border-radius:12px;padding:13px 16px;font-size:15px;outline-color:var(--green)}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.filter{border:1px solid var(--border);background:white;color:var(--text);padding:9px 16px;border-radius:25px;cursor:pointer;font-weight:600;font-size:13px}
+.filter.active{background:var(--green);border-color:var(--green);color:white}
+.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.recipe-card{background:var(--white);border:1px solid var(--border);border-radius:17px;overflow:hidden;cursor:pointer;transition:.2s}
+.recipe-card:hover{transform:translateY(-5px);box-shadow:0 12px 25px #263b2a12}
+.recipe-img{height:190px;background-size:cover;background-position:center;position:relative}
+.recipe-tag{position:absolute;top:13px;left:13px;background:#fffefaed;color:var(--green);padding:6px 11px;border-radius:20px;font-size:11px;font-weight:800}
+.recipe-info{padding:17px}
+.recipe-info h3{font-size:19px;color:var(--green);margin-bottom:5px}
+.recipe-info p{font-size:13px;color:var(--muted);min-height:40px}
+.recipe-meta{display:flex;justify-content:space-between;margin-top:13px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
+.recipe-meta strong{color:var(--orange)}
+.empty{text-align:center;padding:35px;color:var(--muted);display:none}
+.tip{margin-top:42px;background:#eee9dc;border-radius:18px;padding:25px 28px;display:flex;gap:18px;align-items:center}
+.tip-icon{font-size:35px}
+.tip h3{color:var(--green);margin-bottom:4px}
+.tip p{color:#64695f;font-size:14px}
+footer{background:#203c2c;color:#e7ecdf;padding:28px 22px;text-align:center}
+footer strong{font-size:20px}
+footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
+.modal{position:fixed;inset:0;background:#15241dc9;z-index:30;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.show{display:flex}
+.modal-box{background:var(--white);width:100%;max-width:720px;max-height:90vh;overflow:auto;border-radius:20px;padding:25px}
+.modal-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.close{border:0;background:#eee9dc;border-radius:50%;width:35px;height:35px;font-size:20px;cursor:pointer}
+.modal h2{color:var(--green);margin:10px 0}
+.modal h3{color:var(--orange);margin:18px 0 7px}
+.modal li{margin:7px 0 7px 22px}
+.modal p{color:var(--muted)}
+@media(max-width:800px){
+ .hero-box{grid-template-columns:1fr}
+ .hero-image{min-height:220px;grid-row:1}
+ .hero-content{padding:30px 25px}
+ .recipe-grid{grid-template-columns:repeat(2,1fr)}
+ .nav-right a{display:none}
+}
+@media(max-width:520px){
+ .recipe-grid{grid-template-columns:1fr}
+ .recipe-img{height:210px}
+ .section-heading{align-items:flex-start;flex-direction:column}
+ .hero{margin-top:18px}
+ .hero-box{border-radius:17px}
+ .nav{padding:12px 16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">Vanta<span>Mitra</span> <small>వంటమిత్ర</small></div>
+    <div class="nav-right">
+      <a href="#home" data-en="Home" data-te="హోమ్">Home</a>
+      <a href="#recipes" data-en="Recipes" data-te="వంటకాలు">Recipes</a>
+      <a href="#tips" data-en="Cooking Tips" data-te="వంట చిట్కాలు">Cooking Tips</a>
+      <button class="lang" id="languageBtn" onclick="toggleLanguage()">తెలుగు</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-box">
+    <div class="hero-content">
+      <div class="eyebrow" data-en="A little help in every kitchen" data-te="ప్రతి వంటింటికీ చిన్న సహాయం">A little help in every kitchen</div>
+      <h1 data-en="Good food begins with simple steps." data-te="సులభమైన వంటతో రుచికరమైన భోజనం.">Good food begins with simple steps.</h1>
+      <p data-en="New to cooking? No problem. Discover easy Indian recipes explained step by step, just like learning from a friend." data-te="వంట కొత్తగా నేర్చుకుంటున్నారా? చింతించకండి. స్నేహితులు చెప్పినట్లు సులభంగా, ఒక్కో అడుగుగా వంటలు నేర్చుకోండి.">New to cooking? No problem. Discover easy Indian recipes explained step by step, just like learning from a friend.</p>
+      <button class="hero-btn" onclick="document.getElementById('recipes').scrollIntoView({behavior:'smooth'})" data-en="Explore Recipes →" data-te="వంటకాలు చూడండి →">Explore Recipes →</button>
+    </div>
+    <div class="hero-image"></div>
+  </div>
+</section>
+
+<main class="container" id="recipes">
+  <div class="section-heading">
+    <div>
+      <h2 data-en="Find your next favourite" data-te="మీకు నచ్చే వంటకాన్ని ఎంచుకోండి">Find your next favourite</h2>
+      <p data-en="Simple recipes. Everyday ingredients. Delicious results." data-te="సులభమైన వంటలు. ఇంట్లో ఉండే పదార్థాలు. అద్భుతమైన రుచి.">Simple recipes. Everyday ingredients. Delicious results.</p>
+    </div>
+  </div>
+
+  <div class="search-row">
+    <input class="search" id="searchInput" type="search" placeholder="Search recipes..." oninput="renderRecipes()">
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="All" onclick="setCategory('All',this)">All</button>
+    <button class="filter" data-category="Breakfast" onclick="setCategory('Breakfast',this)">Breakfast</button>
+    <button class="filter" data-category="Lunch" onclick="setCategory('Lunch',this)">Lunch</button>
+    <button class="filter" data-category="Dinner" onclick="setCategory('Dinner',this)">Dinner</button>
+    <button class="filter" data-category="Snacks" onclick="setCategory('Snacks',this)">Snacks</button>
+    <button class="filter" data-category="Drinks" onclick="setCategory('Drinks',this)">Drinks</button>
+  </div>
+
+  <div class="recipe-grid" id="recipeGrid"></div>
+  <div class="empty" id="empty">No recipes found. Try another search.</div>
+
+  <section class="tip" id="tips">
+    <div class="tip-icon">🌿</div>
+    <div>
+      <h3 data-en="A beginner's cooking tip" data-te="వంట నేర్చుకునే వారికి ఒక చిట్కా">A beginner's cooking tip</h3>
+      <p data-en="Read the entire recipe once before you start. Keep all ingredients ready, measure them carefully, and cook patiently. Great cooking starts with preparation!" data-te="వంట మొదలుపెట్టే ముందు రెసిపీ మొత్తం ఒకసారి చదవండి. కావలసిన పదార్థాలన్నీ సిద్ధం చేసుకుని, కొలతలు జాగ్రత్తగా పాటిస్తూ ఓపికగా వండండి. మంచి వంటకు సిద్ధతే మొదటి మెట్టు!">Read the entire recipe once before you start. Keep all ingredients ready, measure them carefully, and cook patiently. Great cooking starts with preparation!</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>VantaMitra · వంటమిత్ర</strong>
+  <p data-en="Cooking made simple, one recipe at a time." data-te="ఒక్కో వంటకంతో వంటను సులభంగా నేర్చుకుందాం.">Cooking made simple, one recipe at a time.</p>
+  <p>© 2026 VantaMitra</p>
+</footer>
+
+<div class="modal" id="recipeModal" onclick="closeOutside(event)">
+  <div class="modal-box">
+    <div class="modal-top">
+      <p id="modalCategory"></p>
+      <button class="close" onclick="closeModal()">×</button>
+    </div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalMeta"></p>
+    <h3 id="ingredientsHeading">Ingredients</h3>
+    <ul id="modalIngredients"></ul>
+    <h3 id="stepsHeading">Step-by-step method</h3>
+    <ol id="modalSteps"></ol>
+    <h3 id="tipsHeading">Beginner's tip</h3>
+    <p id="modalTip"></p>
+  </div>
+</div>
+
+<script>
+const recipes = [
+{
+ id:1, category:"Breakfast", time:"20 min", level:"Easy",
+ title:"Soft Vegetable Upma", teTitle:"మెత్తని కూరగాయల ఉప్మా",
+ description:"A comforting breakfast made with roasted semolina and vegetables.",
+ teDescription:"రవ్వ, కూరగాయలతో చేసే రుచికరమైన అల్పాహారం.",
+ image:"https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=80",
+ ingredients:["1 cup semolina (rava)","2½ cups water","1 small onion, chopped","½ cup mixed vegetables","1 green chilli","1 tsp mustard seeds","1 tbsp oil or ghee","Salt to taste"],
+ teIngredients:["1 కప్పు రవ్వ","2½ కప్పుల నీరు","1 చిన్న ఉల్లిపాయ","½ కప్పు మిశ్రమ కూరగాయలు","1 పచ్చిమిర్చి","1 టీ స్పూన్ ఆవాలు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
+ steps:["Dry roast the rava on low heat for 4–5 minutes. Keep it aside.","Heat oil in a pan. Add mustard seeds and let them splutter.","Add onion, green chilli and vegetables. Cook for 3–4 minutes.","Add water and salt. Bring it to a boil.","Slowly add roasted rava while stirring continuously.","Cover and cook on low heat for 3 minutes. Switch off when soft and fluffy."],
+ teSteps:["రవ్వను తక్కువ మంటపై 4–5 నిమిషాలు వేయించి పక్కన పెట్టండి.","బాణలిలో నూనె వేసి ఆవాలు చిటపటలాడే వరకు వేయించండి.","ఉల్లిపాయ, పచ్చిమిర్చి, కూరగాయలు వేసి 3–4 నిమిషాలు వేయించండి.","నీరు, ఉప్పు వేసి మరిగించండి.","వేయించిన రవ్వను నెమ్మదిగా కలుపుతూ వేయండి.","మూతపెట్టి తక్కువ మంటపై 3 నిమిషాలు ఉడికించి దింపండి."],
+ tip:"Keep stirring while adding rava. This prevents lumps. If it looks too dry, add a little hot water."
+},
+{
+ id:2, category:"Breakfast", time:"15 min", level:"Easy",
+ title:"Quick Plain Dosa", teTitle:"సులభమైన దోసె",
+ description:"Crispy, golden dosa for a quick and satisfying breakfast.",
+ teDescription:"బయట కరకరలాడుతూ లోపల మెత్తగా ఉండే దోసె.",
+ image:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=80",
+ ingredients:["2 cups ready-made dosa batter","Oil or ghee","Water, if needed","Chutney or sambar to serve"],
+ teIngredients:["2 కప్పుల సిద్ధంగా ఉన్న దోసె పిండి","నూనె లేదా నెయ్యి","అవసరమైతే కొద్దిగా నీరు","చట్నీ లేదా సాంబార్"],
+ steps:["Take dosa batter in a bowl. Add a little water if it is very thick.","Heat a flat dosa pan on medium heat.","Sprinkle a few drops of water. If they sizzle, the pan is ready.","Pour one ladle of batter and spread it in a circular motion.","Add a few drops of oil around the edges.","Cook until the bottom turns golden and the edges lift. Fold and serve."],
+ teSteps:["దోసె పిండిని గిన్నెలో తీసుకుని చిక్కగా ఉంటే కొద్దిగా నీరు కలపండి.","దోసె పెనం మధ్యస్థ మంటపై వేడి చేయండి.","కొన్ని నీటి చుక్కలు చల్లండి. చిటపటలాడితే పెనం సిద్ధంగా ఉంది.","ఒక గరిటె పిండి పోసి గుండ్రంగా పలుచగా పరచండి.","అంచుల చుట్టూ కొద్దిగా నూనె వేయండి.","కిందిభాగం బంగారు రంగులోకి వచ్చాక మడిచి వడ్డించండి."],
+ tip:"A very hot pan makes spreading difficult. Let it cool slightly before pouring the next dosa."
+},
+{
+ id:3, category:"Lunch", time:"25 min", level:"Easy",
+ title:"Everyday Plain Rice", teTitle:"రోజువారీ అన్నం",
+ description:"A simple guide to making soft, fluffy rice for everyday meals.",
+ teDescription:"రోజూ భోజనానికి మెత్తగా, పొడిపొడిగా ఉండే అన్నం.",
+ image:"https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80",
+ ingredients:["1 cup raw rice","2 cups water (adjust for rice variety)","A pinch of salt (optional)"],
+ teIngredients:["1 కప్పు బియ్యం","2 కప్పుల నీరు (బియ్యం రకాన్ని బట్టి మార్చండి)","చిటికెడు ఉప్పు (ఐచ్ఛికం)"],
+ steps:["Wash rice 2–3 times until the water becomes less cloudy.","Add rice and water to a pot or rice cooker.","For a pot, bring to a boil, then cover and cook on low heat.","Cook for about 12–15 minutes, depending on the rice.","Check that the grains are soft and the water is absorbed.","Rest covered for 5 minutes, then fluff gently with a fork."],
+ teSteps:["బియ్యాన్ని 2–3 సార్లు కడగండి.","బియ్యం, నీటిని పాత్రలో లేదా రైస్ కుక్కర్‌లో వేయండి.","పాత్రలో అయితే మరిగిన తర్వాత మూతపెట్టి తక్కువ మంటపై ఉడికించండి.","బియ్యం రకాన్ని బట్టి సుమారు 12–15 నిమిషాలు ఉడికించండి.","బియ్యం మెత్తగా ఉడికిందో, నీరు ఇంకిపోయిందో చూడండి.","5 నిమిషాలు మూతపెట్టి ఉంచి తర్వాత మెల్లగా కలపండి."],
+ tip:"Water quantity varies by rice variety and age. Follow the packet instructions when available."
+},
+{
+ id:4, category:"Dinner", time:"30 min", level:"Easy",
+ title:"Simple Potato Fry", teTitle:"బంగాళాదుంప వేపుడు",
+ description:"A homestyle potato side dish with simple everyday spices.",
+ teDescription:"ఇంట్లో ఉండే మసాలాలతో చేసే బంగాళాదుంప వేపుడు.",
+ image:"https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80",
+ ingredients:["3 medium potatoes","1 small onion (optional)","½ tsp mustard seeds","½ tsp chilli powder","¼ tsp turmeric","1 tbsp oil","Salt to taste"],
+ teIngredients:["3 మధ్యస్థ బంగాళాదుంపలు","1 చిన్న ఉల్లిపాయ (ఐచ్ఛికం)","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ కారం","¼ టీ స్పూన్ పసుపు","1 టేబుల్ స్పూన్ నూనె","తగినంత ఉప్పు"],
+ steps:["Wash, peel and cut potatoes into small even cubes.","Heat oil in a pan. Add mustard seeds.","Add onion if using, and cook until soft.","Add potatoes, turmeric and salt. Mix well.","Cover and cook on low-medium heat for 12–15 minutes, stirring occasionally.","Add chilli powder and cook uncovered for 3–4 minutes until lightly crisp."],
+ teSteps:["బంగాళాదుంపలను కడిగి తొక్క తీసి చిన్న ముక్కలుగా కోయండి.","బాణలిలో నూనె వేడి చేసి ఆవాలు వేయండి.","ఉల్లిపాయ వాడితే వేసి మెత్తబడే వరకు వేయించండి.","బంగాళాదుంపలు, పసుపు, ఉప్పు వేసి కలపండి.","మూతపెట్టి తక్కువ-మధ్యస్థ మంటపై 12–15 నిమిషాలు ఉడికించండి.","కారం వేసి మూత లేకుండా మరో 3–4 నిమిషాలు వేయించండి."],
+ tip:"Cut potatoes into similar-sized pieces so they cook evenly. Stir gently to avoid breaking them."
+},
+{
+ id:5, category:"Snacks", time:"10 min", level:"Easy",
+ title:"Coconut Chutney", teTitle:"కొబ్బరి చట్నీ",
+ description:"A fresh, creamy South Indian chutney for dosa and idli.",
+ teDescription:"ఇడ్లీ, దోసెలకు సరిపోయే తాజా కొబ్బరి చట్నీ.",
+ image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",
+ ingredients:["1 cup fresh grated coconut","2 tbsp roasted gram (putnalu)","1 green chilli","Small piece of ginger","Salt to taste","½ cup water","For tempering: oil, mustard seeds and curry leaves"],
+ teIngredients:["1 కప్పు తురిమిన కొబ్బరి","2 టేబుల్ స్పూన్ల పుట్నాలు","1 పచ్చిమిర్చి","చిన్న అల్లం ముక్క","తగినంత ఉప్పు","½ కప్పు నీరు","తాలింపు కోసం నూనె, ఆవాలు, కరివేపాకు"],
+ steps:["Add coconut, roasted gram, green chilli, ginger and salt to a mixer jar.","Add a little water and grind to a smooth paste.","Adjust water to get your preferred consistency.","Heat a teaspoon of oil in a small pan.","Add mustard seeds and curry leaves. Let them splutter.","Pour the tempering over the chutney and mix."],
+ teSteps:["కొబ్బరి, పుట్నాలు, పచ్చిమిర్చి, అల్లం, ఉప్పు మిక్సీ జార్‌లో వేయండి.","కొద్దిగా నీరు పోసి మెత్తగా రుబ్బండి.","మీకు నచ్చిన చిక్కదనం వచ్చేలా నీరు కలపండి.","చిన్న బాణలిలో ఒక టీ స్పూన్ నూనె వేడి చేయండి.","ఆవాలు, కరివేపాకు వేసి చిటపటలాడించండి.","ఈ తాలింపును చట్నీలో వేసి కలపండి."],
+ tip:"Add water little by little while grinding. Fresh coconut gives the best flavour."
+},
+{
+ id:6, category:"Drinks", time:"5 min", level:"Easy",
+ title:"Sweet Lassi", teTitle:"తీపి లస్సీ",
+ description:"A cool and creamy yogurt drink for warm afternoons.",
+ teDescription:"వేసవి మధ్యాహ్నాలకు చల్లని, రుచికరమైన పెరుగు పానీయం.",
+ image:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=900&q=80",
+ ingredients:["1 cup fresh plain curd","½ cup chilled water or milk","2–3 tsp sugar (adjust to taste)","A pinch of cardamom powder","Ice cubes (optional)"],
+ teIngredients:["1 కప్పు తాజా పెరుగు","½ కప్పు చల్లని నీరు లేదా పాలు","2–3 టీ స్పూన్ల చక్కెర","చిటికెడు యాలకుల పొడి","ఐస్ ముక్కలు (ఐచ్ఛికం)"],
+ steps:["Add curd and sugar to a mixer jar.","Add chilled water or milk.","Blend until smooth and lightly frothy.","Add cardamom powder and mix.","Pour into glasses. Add ice if desired and serve immediately."],
+ teSteps:["పెరుగు, చక్కెరను మిక్సీ జార్‌లో వేయండి.","చల్లని నీరు లేదా పాలు కలపండి.","మెత్తగా, కొద్దిగా నురుగు వచ్చే వరకు మిక్సీ చేయండి.","యాలకుల పొడి వేసి కలపండి.","గ్లాసుల్లో పోసి కావాలంటే ఐస్ వేసి వెంటనే వడ్డించండి."],
+ tip:"Use fresh, mildly sour curd for a balanced taste. Adjust sugar to your preference."
+}
+];
+
+let language = "en";
+let activeCategory = "All";
+
+function toggleLanguage(){
+ language = language === "en" ? "te" : "en";
+ document.documentElement.lang = language;
+ document.getElementById("languageBtn").textContent = language === "en" ? "తెలుగు" : "English";
+ document.querySelectorAll("[data-en]").forEach(el=>{
+   el.textContent = el.dataset[language];
+ });
+ document.getElementById("searchInput").placeholder = language === "en" ? "Search recipes..." : "వంటకాలను వెతకండి...";
+ renderRecipes();
+}
+
+function setCategory(category,button){
+ activeCategory = category;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ renderRecipes();
+}
+
+function renderRecipes(){
+ const term = document.getElementById("searchInput").value.toLowerCase().trim();
+ const filtered = recipes.filter(r=>{
+   const title = language === "en" ? r.title : r.teTitle;
+   const desc = language === "en" ? r.description : r.teDescription;
+   const matchesText = (title+" "+desc+" "+r.category+" "+r.teTitle).toLowerCase().includes(term);
+   return (activeCategory === "All" || r.category === activeCategory) && matchesText;
+ });
+ const grid = document.getElementById("recipeGrid");
+ grid.innerHTML = "";
+ document.getElementById("empty").style.display = filtered.length ? "none" : "block";
+
+ filtered.forEach(r=>{
+   const card = document.createElement("article");
+   card.className = "recipe-card";
+   card.onclick = ()=>openRecipe(r.id);
+   const title = language === "en" ? r.title : r.teTitle;
+   const desc = language === "en" ? r.description : r.teDescription;
+   const category = language === "en" ? r.category : ({
+     Breakfast:"అల్పాహారం",Lunch:"భోజనం",Dinner:"రాత్రి భోజనం",
+     Snacks:"స్నాక్స్",Drinks:"పానీయాలు"
+   }[r.category]);
+   card.innerHTML = `
+     <div class="recipe-img" style="background-image:url('${r.image}')">
+       <span class="recipe-tag">${category}</span>
+     </div>
+     <div class="recipe-info">
+       <h3>${title}</h3>
+       <p>${desc}</p>
+       <div class="recipe-meta">
+         <span>◷ ${r.time}</span>
+         <strong>${language==="en" ? "Beginner friendly" : "ప్రారంభకులకు సులభం"}</strong>
+       </div>
+     </div>`;
+   grid.appendChild(card);
+ });
+}
+
+function openRecipe(id){
+ const r = recipes.find(item=>item.id===id);
+ document.getElementById("modalCategory").textContent = r.category+" · "+r.time;
+ document.getElementById("modalTitle").textContent = language==="en" ? r.title : r.teTitle;
+ document.getElementById("modalDescription").textContent = language==="en" ? r.description : r.teDescription;
+ document.getElementById("ingredientsHeading").textContent = language==="en" ? "Ingredients" : "కావలసిన పదార్థాలు";
+ document.getElementById("stepsHeading").textContent = language==="en" ? "Step-by-step method" : "తయారీ విధానం";
+ document.getElementById("tipsHeading").textContent = language==="en" ? "Beginner's tip" : "చిన్న చిట్కా";
+ document.getElementById("modalTip").textContent = r.tip;
+ document.getElementById("modalIngredients").innerHTML = (language==="en" ? r.ingredients : r.teIngredients).map(x=>`<li>${x}</li>`).join("");
+ document.getElementById("modalSteps").innerHTML = (language==="en" ? r.steps : r.teSteps).map(x=>`<li>${x}</li>`).join("");
+ document.getElementById("recipeModal").classList.add("show");
+ document.body.style.overflow="hidden";
+}
+
+function closeModal(){
+ document.getElementById("recipeModal").classList.remove("show");
+ document.body.style.overflow="";
+}
+function closeOutside(event){
+ if(event.target.id==="recipeModal") closeModal();
+}
+document.addEventListener("keydown",event=>{
+ if(event.key==="Escape") closeModal();
+});
+renderRecipes();
+</script>
+</body>
+</html>
