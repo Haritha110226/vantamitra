@@ -123,15 +123,16 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
   <div class="search-row">
     <input class="search" id="searchInput" type="search" placeholder="Search recipes..." oninput="renderRecipes()">
   </div>
-  <div class="filters" id="filters">
+<div class="filters" id="filters">
     <button class="filter active" data-category="All" onclick="setCategory('All',this)">All</button>
     <button class="filter" data-category="Breakfast" onclick="setCategory('Breakfast',this)">Breakfast</button>
-    <button class="filter" data-category="Lunch" onclick="setCategory('Lunch',this)">Lunch</button>
-    <button class="filter" data-category="Dinner" onclick="setCategory('Dinner',this)">Dinner</button>
+    <button class="filter" data-category="Rice" onclick="setCategory('Rice',this)">Rice</button>
+    <button class="filter" data-category="Curries" onclick="setCategory('Curries',this)">Curries</button>
+    <button class="filter" data-category="Dal" onclick="setCategory('Dal',this)">Dal &amp; Sambar</button>
     <button class="filter" data-category="Snacks" onclick="setCategory('Snacks',this)">Snacks</button>
+    <button class="filter" data-category="Chutneys" onclick="setCategory('Chutneys',this)">Chutneys</button>
     <button class="filter" data-category="Drinks" onclick="setCategory('Drinks',this)">Drinks</button>
-  </div>
-
+</div>
   <div class="recipe-grid" id="recipeGrid"></div>
   <div class="empty" id="empty">No recipes found. Try another search.</div>
 
@@ -199,7 +200,7 @@ prepTime:"5 min", servings:2,
  title:"Soft Vegetable Upma", teTitle:"మెత్తని కూరగాయల ఉప్మా",
  description:"A comforting breakfast made with roasted semolina and vegetables.",
  teDescription:"రవ్వ, కూరగాయలతో చేసే రుచికరమైన అల్పాహారం.",
-image:"vegetable-upma.png",
+image:"images/vegetable-upma.png",
  ingredients:["1 cup semolina (rava)","2½ cups water","1 small onion, chopped","½ cup mixed vegetables","1 green chilli","1 tsp mustard seeds","1 tbsp oil or ghee","Salt to taste"],
  teIngredients:["1 కప్పు రవ్వ","2½ కప్పుల నీరు","1 చిన్న ఉల్లిపాయ","½ కప్పు మిశ్రమ కూరగాయలు","1 పచ్చిమిర్చి","1 టీ స్పూన్ ఆవాలు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
  steps:["Dry roast the rava on low heat for 4–5 minutes. Keep it aside.","Heat oil in a pan. Add mustard seeds and let them splutter.","Add onion, green chilli and vegetables. Cook for 3–4 minutes.","Add water and salt. Bring it to a boil.","Slowly add roasted rava while stirring continuously.","Cover and cook on low heat for 3 minutes. Switch off when soft and fluffy."],
@@ -221,7 +222,7 @@ tip:"A very hot pan makes spreading difficult. Let it cool slightly before pouri
 teTip:"పెనం మరీ వేడిగా ఉంటే దోసె పిండిని పరచడం కష్టమవుతుంది. తర్వాత దోసె వేసే ముందు పెనం కొద్దిగా చల్లారనివ్వండి."
 },
 {
- id:3, category:"Lunch", time:"25 min", level:"Easy",prepTime:"2 min", servings:3,
+ id:3, category:"Rice", time:"25 min", level:"Easy",prepTime:"2 min", servings:3,
  title:"Everyday Plain Rice", teTitle:"రోజువారీ అన్నం",
  description:"A simple guide to making soft, fluffy rice for everyday meals.",
  teDescription:"రోజూ భోజనానికి మెత్తగా, పొడిపొడిగా ఉండే అన్నం.",
@@ -234,11 +235,86 @@ tip:"Water quantity varies by rice variety and age. Follow the packet instructio
 teTip:"బియ్యం రకం, పాతదా కొత్తదా అనే దానిపై నీటి పరిమాణం మారుతుంది. వీలైతే ప్యాకెట్‌పై ఇచ్చిన సూచనలను పాటించండి."
 },
 {
- id:4, category:"Dinner", time:"30 min", level:"Easy",prepTime:"10 min", servings:2,
+ id:10, category:"Rice", time:"35–45 min", level:"Easy", prepTime:"30 min soaking", servings:2,
+ title:"Homestyle Bagara Rice", teTitle:"ఇంటి స్టైల్ బగారా రైస్",
+ description:"Aromatic homemade bagara rice prepared with whole spices, onions, green chillies and fresh herbs.",
+ teDescription:"సుగంధ ద్రవ్యాలు, ఉల్లిపాయలు, పచ్చిమిర్చి, తాజా ఆకుకూరలతో చేసే రుచికరమైన ఇంటి స్టైల్ బగారా రైస్.",
+ image:"images/bagara-rice.png",
+ ingredients:[
+   "1 glass basmati or regular rice",
+   "3 tbsp oil or ghee",
+  "2 inches of cinnamon stick",
+   "4 cloves",
+   "3 cardamom pods",
+   "2 bay leaves",
+   "1 tsp shah jeera",
+   "1 medium onion, sliced",
+   "4 green chillies (adjust to taste)",
+   "1 tbsp ginger-garlic paste",
+   "1 small handful mint leaves",
+   "1 small handful coriander leaves",
+   "1 carrot, optional",
+   "Salt to taste",
+   "2 glasses water"
+ ],
+ teIngredients:[
+   "1 గ్లాసు బాస్మతి లేదా సాధారణ బియ్యం",
+   "3 టేబుల్ స్పూన్ల నూనె లేదా నెయ్యి",
+  "2 అంగుళాల దాల్చిన చెక్క",
+   "4 లవంగాలు",
+   "3 యాలకులు",
+   "2 బిర్యానీ ఆకులు",
+   "1 టీ స్పూన్ షాజీరా",
+   "1 మధ్యస్థ ఉల్లిపాయ, సన్నగా తరిగినది",
+   "4 పచ్చిమిర్చి (కారం రుచికి తగినట్లు)",
+   "1 టేబుల్ స్పూన్ అల్లం వెల్లుల్లి పేస్ట్",
+   "1 చిన్న గుప్పెడు పుదీనా ఆకులు",
+   "1 చిన్న గుప్పెడు కొత్తిమీర",
+   "1 క్యారెట్, ఐచ్ఛికం",
+   "తగినంత ఉప్పు",
+   "2 గ్లాసుల నీరు"
+ ],
+ steps:[
+   "Wash the rice thoroughly and soak it for 30 minutes. Drain the water before cooking.",
+   "Heat oil or ghee in a cooking vessel.",
+   "Add cinnamon, cloves, cardamom, bay leaves and shah jeera. Let the spices release their aroma.",
+   "Add the sliced onion and sauté until it softens.",
+   "Add green chillies and fry gently without burning them.",
+   "Add ginger-garlic paste and sauté for about one minute.",
+   "Add the optional carrot and mix well.",
+   "Add mint leaves and salt. Mix and sauté briefly.",
+   "Add the drained rice and gently mix so the grains are coated with the spices.",
+   "Pour in 2 glasses of water for 1 glass of rice. Mix gently and check the salt.",
+   "Close the lid and cook on medium flame for about 5 minutes.",
+   "Reduce the flame to low and cook for another 2–3 minutes, then carefully check the rice.",
+   "If the rice is not fully cooked, continue cooking on low flame until the water is absorbed and the grains are tender.",
+   "Garnish with fresh coriander leaves. Switch off the stove and let the rice rest, covered, for a few minutes before serving."
+ ],
+ teSteps:[
+   "బియ్యాన్ని బాగా కడిగి 30 నిమిషాలు నానబెట్టండి. వండే ముందు నీటిని వంపేయండి.",
+   "వంట పాత్రలో నూనె లేదా నెయ్యి వేడి చేయండి.",
+   "దాల్చిన చెక్క, లవంగాలు, యాలకులు, బిర్యానీ ఆకులు, షాజీరా వేసి సువాసన వచ్చే వరకు వేయించండి.",
+   "తరిగిన ఉల్లిపాయ వేసి మెత్తబడే వరకు వేయించండి.",
+   "పచ్చిమిర్చి వేసి మాడిపోకుండా వేయించండి.",
+   "అల్లం వెల్లుల్లి పేస్ట్ వేసి సుమారు ఒక నిమిషం వేయించండి.",
+   "క్యారెట్ ఉపయోగిస్తే ఇప్పుడు వేసి కలపండి.",
+   "పుదీనా ఆకులు, ఉప్పు వేసి కొద్దిసేపు కలపండి.",
+   "నీరు వంపిన బియ్యం వేసి మసాలాలు పట్టేలా మెల్లగా కలపండి.",
+   "ఒక గ్లాసు బియ్యానికి రెండు గ్లాసుల నీరు పోసి, ఉప్పు సరిచూసుకోండి.",
+   "మూత పెట్టి మీడియం మంటపై సుమారు 5 నిమిషాలు ఉడికించండి.",
+   "తర్వాత సిమ్‌లో మరో 2–3 నిమిషాలు ఉంచి బియ్యం ఉడికిందో చూడండి.",
+   "బియ్యం పూర్తిగా ఉడకకపోతే నీరు ఇంకిపోయి గింజలు మెత్తబడే వరకు తక్కువ మంటపై ఉడికించండి.",
+   "కొత్తిమీరతో అలంకరించి, స్టవ్ ఆఫ్ చేసి కొన్ని నిమిషాలు మూతపెట్టి ఉంచండి."
+ ],
+ tip:"Use the same glass to measure rice and water. Cooking time may vary depending on the rice variety and vessel. Check the rice before switching off the stove.",
+ teTip:"బియ్యం, నీరు కొలవడానికి ఒకే గ్లాసును ఉపయోగించండి. బియ్యం రకం, పాత్రను బట్టి ఉడికే సమయం మారవచ్చు. స్టవ్ ఆఫ్ చేసే ముందు బియ్యం పూర్తిగా ఉడికిందో చూడండి."
+},
+{
+ id:4, category:"Curries", time:"30 min", level:"Easy",prepTime:"10 min", servings:2,
  title:"Simple Potato Fry", teTitle:"బంగాళాదుంప వేపుడు",
  description:"A homestyle potato side dish with simple everyday spices.",
  teDescription:"ఇంట్లో ఉండే మసాలాలతో చేసే బంగాళాదుంప వేపుడు.",
-image:"potato-fry.png",
+image:"images/potato-fry.png",
  ingredients:["3 medium potatoes","1 small onion (optional)","½ tsp mustard seeds","½ tsp chilli powder","¼ tsp turmeric","1 tbsp oil","Salt to taste"],
  teIngredients:["3 మధ్యస్థ బంగాళాదుంపలు","1 చిన్న ఉల్లిపాయ (ఐచ్ఛికం)","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ కారం","¼ టీ స్పూన్ పసుపు","1 టేబుల్ స్పూన్ నూనె","తగినంత ఉప్పు"],
  steps:["Wash, peel and cut potatoes into small even cubes.","Heat oil in a pan. Add mustard seeds.","Add onion if using, and cook until soft.","Add potatoes, turmeric and salt. Mix well.","Cover and cook on low-medium heat for 12–15 minutes, stirring occasionally.","Add chilli powder and cook uncovered for 3–4 minutes until lightly crisp."],
@@ -247,11 +323,11 @@ tip:"Cut potatoes into similar-sized pieces so they cook evenly. Stir gently to 
 teTip:"బంగాళాదుంప ముక్కలన్నీ ఒకే పరిమాణంలో కోయండి. అప్పుడు సమానంగా ఉడుకుతాయి. ముక్కలు విరిగిపోకుండా మెల్లగా కలపండి."
 },
 {
- id:5, category:"Snacks", time:"10 min", level:"Easy",prepTime:"5 min", servings:3,
+ id:5, category:"Chutneys", time:"10 min", level:"Easy",prepTime:"5 min", servings:3,
  title:"Coconut Chutney", teTitle:"కొబ్బరి చట్నీ",
  description:"A fresh, creamy South Indian chutney for dosa and idli.",
  teDescription:"ఇడ్లీ, దోసెలకు సరిపోయే తాజా కొబ్బరి చట్నీ.",
-image:"coconut-chutney.png",
+image:"images/coconut-chutney.png",
  ingredients:["1 cup fresh grated coconut","2 tbsp roasted gram (putnalu)","1 green chilli","Small piece of ginger","Salt to taste","½ cup water","For tempering: oil, mustard seeds and curry leaves"],
  teIngredients:["1 కప్పు తురిమిన కొబ్బరి","2 టేబుల్ స్పూన్ల పుట్నాలు","1 పచ్చిమిర్చి","చిన్న అల్లం ముక్క","తగినంత ఉప్పు","½ కప్పు నీరు","తాలింపు కోసం నూనె, ఆవాలు, కరివేపాకు"],
  steps:["Add coconut, roasted gram, green chilli, ginger and salt to a mixer jar.","Add a little water and grind to a smooth paste.","Adjust water to get your preferred consistency.","Heat a teaspoon of oil in a small pan.","Add mustard seeds and curry leaves. Let them splutter.","Pour the tempering over the chutney and mix."],
@@ -264,7 +340,7 @@ teTip:"చట్నీ రుబ్బేటప్పుడు నీటిన�
  title:"Sweet Lassi", teTitle:"తీపి లస్సీ",
  description:"A cool and creamy yogurt drink for warm afternoons.",
  teDescription:"వేసవి మధ్యాహ్నాలకు చల్లని, రుచికరమైన పెరుగు పానీయం.",
-image:"sweet-lassi.jpg",
+image:"images/sweet-lassi.jpg",
  ingredients:["1 cup fresh plain curd","½ cup chilled water or milk","2–3 tsp sugar (adjust to taste)","A pinch of cardamom powder","Ice cubes (optional)"],
  teIngredients:["1 కప్పు తాజా పెరుగు","½ కప్పు చల్లని నీరు లేదా పాలు","2–3 టీ స్పూన్ల చక్కెర","చిటికెడు యాలకుల పొడి","ఐస్ ముక్కలు (ఐచ్ఛికం)"],
  steps:["Add curd and sugar to a mixer jar.","Add chilled water or milk.","Blend until smooth and lightly frothy.","Add cardamom powder and mix.","Pour into glasses. Add ice if desired and serve immediately."],
@@ -286,11 +362,11 @@ tip:"For crisp pesarattu, spread the batter thinly on a properly heated pan.",
 teTip:"కరకరలాడే పెసరట్టు కోసం వేడైన పెనంపై పిండిని పలుచగా, సమానంగా పరచండి."
 },
 {
- id:8, category:"Lunch", time:"30 min", level:"Easy",prepTime:"10 min", servings:3,
+ id:8, category:"Dal", time:"30 min", level:"Easy",prepTime:"10 min", servings:3,
  title:"Andhra Tomato Pappu", teTitle:"ఆంధ్ర టమాట పప్పు",
  description:"A comforting Andhra-style tomato dal that tastes wonderful with hot rice.",
  teDescription:"వేడి అన్నంతో ఎంతో రుచిగా ఉండే ఆంధ్ర టమాట పప్పు.",
-image:"tomato-pappu.png",
+image:"images/tomato-pappu.png",
  ingredients:["½ cup toor dal (kandi pappu)","2 medium tomatoes, chopped","1 small onion, chopped","2 green chillies","¼ tsp turmeric","½ tsp chilli powder","½ tsp mustard seeds","½ tsp cumin seeds","Curry leaves","1 tbsp oil or ghee","Salt to taste"],
  teIngredients:["½ కప్పు కందిపప్పు","2 మధ్యస్థ టమాటాలు","1 చిన్న ఉల్లిపాయ","2 పచ్చిమిర్చి","¼ టీ స్పూన్ పసుపు","½ టీ స్పూన్ కారం","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ జీలకర్ర","కరివేపాకు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
  steps:["Wash the toor dal and add it to a pressure cooker with tomatoes, turmeric and 1½ cups water.","Pressure cook until the dal becomes soft. Allow the pressure to release naturally.","Mash the cooked dal gently.","Heat oil or ghee in a pan. Add mustard seeds and cumin seeds.","Add green chillies, onion and curry leaves. Cook until the onion softens.","Add chilli powder, mashed dal, salt and water as needed.","Simmer for 5 minutes and serve hot with rice."],
@@ -330,14 +406,17 @@ function toggleLanguage(){
  document.getElementById("searchInput").placeholder =
    language === "en" ? "Search recipes..." : "వంటకాలను వెతకండి...";
 
- const categoryNames = {
-   All: { en:"All", te:"అన్నీ" },
-   Breakfast: { en:"Breakfast", te:"అల్పాహారం" },
-   Lunch: { en:"Lunch", te:"భోజనం" },
-   Dinner: { en:"Dinner", te:"రాత్రి భోజనం" },
-   Snacks: { en:"Snacks", te:"స్నాక్స్" },
-   Drinks: { en:"Drinks", te:"పానీయాలు" }
- };
+const categoryNames = {
+  All: { en: "All", te: "అన్నీ" },
+  Breakfast: { en: "Breakfast", te: "అల్పాహారం" },
+  Rice: { en: "Rice", te: "అన్నం వంటకాలు" },
+  Curries: { en: "Curries", te: "కూరలు" },
+  Dal: { en: "Dal & Sambar", te: "పప్పు & సాంబార్" },
+  Snacks: { en: "Snacks", te: "చిరుతిళ్లు" },
+  Chutneys: { en: "Chutneys", te: "పచ్చళ్లు" },
+  Drinks: { en: "Drinks", te: "పానీయాలు" }
+};
+
 
  document.querySelectorAll(".filter").forEach(button=>{
    const category = button.dataset.category;
@@ -375,10 +454,18 @@ function renderRecipes(){
    card.onclick = ()=>openRecipe(r.id);
    const title = language === "en" ? r.title : r.teTitle;
    const desc = language === "en" ? r.description : r.teDescription;
-   const category = language === "en" ? r.category : ({
-     Breakfast:"అల్పాహారం",Lunch:"భోజనం",Dinner:"రాత్రి భోజనం",
-     Snacks:"స్నాక్స్",Drinks:"పానీయాలు"
-   }[r.category]);
+const categoryNames = {
+  All: { en: "All", te: "అన్నీ" },
+  Breakfast: { en: "Breakfast", te: "అల్పాహారం" },
+  Rice: { en: "Rice", te: "అన్నం వంటకాలు" },
+  Curries: { en: "Curries", te: "కూరలు" },
+  Dal: { en: "Dal & Sambar", te: "పప్పు & సాంబార్" },
+  Snacks: { en: "Snacks", te: "చిరుతిళ్లు" },
+  Chutneys: { en: "Chutneys", te: "పచ్చళ్లు" },
+  Drinks: { en: "Drinks", te: "పానీయాలు" }
+};
+
+const category = categoryNames[r.category]?.[language] || r.category;
    card.innerHTML = `
      <div class="recipe-img" style="background-image:url('${r.image}')">
        <span class="recipe-tag">${category}</span>
@@ -397,30 +484,73 @@ function renderRecipes(){
 let currentServings = 2;
 let activeRecipe = null;
 
-function scaleIngredient(item, originalServings, selectedServings){
-  const match = item.match(/^(\s*)(\d+(?:\.\d+)?|[½¼¾⅓⅔])([½¼¾⅓⅔])?(\s+.*)$/);
 
-  if(!match) return item;
+
+function scaleIngredient(item, originalServings, selectedServings) {
+  const match = item.match(/^(\s*)(\d+(?:\.\d+)?|[½¼¾⅓⅔])(?:\s*([½¼¾⅓⅔]))?(\s+.*)$/);
+
+  if (!match) return item;
 
   const fractions = {
-    "½":0.5,
-    "¼":0.25,
-    "¾":0.75,
-    "⅓":1/3,
-    "⅔":2/3
+    "½": 0.5,
+    "¼": 0.25,
+    "¾": 0.75,
+    "⅓": 1 / 3,
+    "⅔": 2 / 3
   };
 
   let quantity = fractions[match[2]] ?? Number(match[2]);
 
-  if(match[3]){
+  if (match[3]) {
     quantity += fractions[match[3]];
   }
 
   const adjusted = quantity * selectedServings / originalServings;
-  const result = Number(adjusted.toFixed(2)).toString();
+
+  const fractionOptions = [
+    { value: 0, symbol: "" },
+    { value: 0.125, symbol: "⅛" },
+    { value: 0.25, symbol: "¼" },
+    { value: 1 / 3, symbol: "⅓" },
+    { value: 0.375, symbol: "⅜" },
+    { value: 0.5, symbol: "½" },
+    { value: 0.625, symbol: "⅝" },
+    { value: 2 / 3, symbol: "⅔" },
+    { value: 0.75, symbol: "¾" },
+    { value: 0.875, symbol: "⅞" },
+    { value: 1, symbol: "" }
+  ];
+
+  const whole = Math.floor(adjusted);
+  const remainder = adjusted - whole;
+
+  let closest = fractionOptions.reduce((best, current) =>
+    Math.abs(current.value - remainder) <
+    Math.abs(best.value - remainder) ? current : best
+  );
+
+  let result;
+
+  if (Math.abs(closest.value - remainder) <= 0.03) {
+    let finalWhole = whole;
+
+    if (closest.value === 1) {
+      finalWhole++;
+      closest = fractionOptions[0];
+    }
+
+    result = finalWhole === 0
+      ? closest.symbol || "0"
+      : closest.symbol
+        ? finalWhole + " " + closest.symbol
+        : String(finalWhole);
+  } else {
+    result = Number(adjusted.toFixed(2)).toString();
+  }
 
   return match[1] + result + match[4];
 }
+
 
 function changeServings(change){
   currentServings = Math.max(1, currentServings + change);
