@@ -189,6 +189,21 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
     <ol id="modalSteps"></ol>
     <h3 id="tipsHeading">Beginner's tip</h3>
     <p id="modalTip"></p>
+    <div class="share-recipe">
+<h3 id="shareHeading"
+    data-en="Share this recipe"
+    data-te="ఈ రెసిపీని షేర్ చేయండి">
+  Share this recipe
+</h3>
+
+  <div class="share-buttons">
+    <button onclick="shareRecipe('whatsapp')">WhatsApp</button>
+    <button onclick="shareRecipe('instagram')">Instagram</button>
+    <button onclick="shareRecipe('facebook')">Facebook</button>
+    <button onclick="shareRecipe('x')">X</button>
+    <button onclick="shareRecipe('copy')">Copy Link</button>
+  </div>
+</div>
   </div>
 </div>
 
@@ -379,7 +394,7 @@ teTip:"మీకు నచ్చిన పప్పు చిక్కదనా�
  title:"Crispy Onion Pakodi", teTitle:"కరకరలాడే ఉల్లిపాయ పకోడీ",
  description:"A crunchy tea-time snack made with onions and gram flour.",
  teDescription:"ఉల్లిపాయలు, శెనగపిండితో చేసే కరకరలాడే సాయంత్రపు చిరుతిండి.",
-image:"onion-pakodi.png",
+image:"images/onion-pakodi.png",
  ingredients:["2 medium onions, thinly sliced","¾ cup gram flour (besan)","2 tbsp rice flour","1 green chilli, chopped","½ tsp chilli powder","A pinch of turmeric","A few curry leaves","Salt to taste","Water as needed","Oil for deep frying"],
  teIngredients:["2 మధ్యస్థ ఉల్లిపాయలు, సన్నగా కోసినవి","¾ కప్పు శెనగపిండి","2 టేబుల్ స్పూన్ల బియ్యప్పిండి","1 పచ్చిమిర్చి, తరిగినది","½ టీ స్పూన్ కారం","చిటికెడు పసుపు","కొద్దిగా కరివేపాకు","తగినంత ఉప్పు","అవసరమైనంత నీరు","వేయించడానికి నూనె"],
  steps:["Place sliced onions in a bowl with salt. Mix and rest for 5 minutes.","Add green chilli, curry leaves, chilli powder and turmeric.","Add gram flour and rice flour. Mix well.","Sprinkle a little water only if needed to bind the mixture.","Heat oil in a deep pan on medium heat.","Drop small portions of the mixture carefully into the hot oil.","Fry until golden and crisp. Drain and serve hot."],
@@ -568,6 +583,55 @@ function changeServings(change){
       ).join("");
   }
 }
+function shareRecipe(platform) {
+  if (!activeRecipe) return;
+
+  const recipeTitle = language === "en"
+    ? activeRecipe.title
+    : activeRecipe.teTitle;
+
+const recipeUrl = "https://haritha110226.github.io/vantamitra/?recipe=" + activeRecipe.id;
+
+ const message = language === "en"
+  ? recipeTitle + " - Try this recipe on VantaMitra!"
+  : recipeTitle + " – ఈ వంటకాన్ని వంటమిత్రలో ప్రయత్నించండి!";
+
+  if (platform === "whatsapp") {
+    window.open(
+      "https://wa.me/?text=" + encodeURIComponent(message + " " + recipeUrl),
+      "_blank"
+    );
+  }
+
+  else if (platform === "facebook") {
+    window.open(
+      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(recipeUrl),
+      "_blank"
+    );
+  }
+
+  else if (platform === "x") {
+    window.open(
+      "https://twitter.com/intent/tweet?text=" +
+      encodeURIComponent(message) + "&url=" + encodeURIComponent(recipeUrl),
+      "_blank"
+    );
+  }
+
+  else if (platform === "instagram" || platform === "copy") {
+    navigator.clipboard.writeText(message + " " + recipeUrl)
+      .then(() => {
+        alert(
+          language === "en"
+            ? "Recipe link copied! You can share it on Instagram."
+            : "రెసిపీ లింక్ కాపీ అయింది! ఇన్‌స్టాగ్రామ్‌లో షేర్ చేయవచ్చు."
+        );
+      })
+      .catch(() => {
+        alert("Please copy the recipe link from your browser address bar.");
+      });
+  }
+}
 function openRecipe(id){
  const r = recipes.find(item=>item.id===id);
  activeRecipe = r;
@@ -614,6 +678,17 @@ document.addEventListener("keydown",event=>{
  if(event.key==="Escape") closeModal();
 });
 renderRecipes();
+const sharedRecipeId = new URLSearchParams(window.location.search).get("recipe");
+
+if (sharedRecipeId) {
+  const sharedRecipe = recipes.find(
+    item => String(item.id) === sharedRecipeId
+  );
+
+  if (sharedRecipe) {
+    openRecipe(sharedRecipe.id);
+  }
+}
 </script>
 
 </body>
