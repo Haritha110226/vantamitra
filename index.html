@@ -123,6 +123,28 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
   color: #ffffff;
   border-color: #294b35;
   transform: translateY(-2px);
+} 
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #c65b52;
+  font-size: 23px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.12);
 }
 </style>
 </head>
@@ -172,6 +194,7 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
     <button class="filter" data-category="Snacks" onclick="setCategory('Snacks',this)">Snacks</button>
     <button class="filter" data-category="Chutneys" onclick="setCategory('Chutneys',this)">Chutneys</button>
     <button class="filter" data-category="Drinks" onclick="setCategory('Drinks',this)">Drinks</button>
+    <button class="filter" id="favoritesFilter" onclick="showFavorites(this)">♡ My Favourites</button>
 </div>
   <div class="recipe-grid" id="recipeGrid"></div>
   <div class="empty" id="empty">No recipes found. Try another search.</div>
@@ -452,7 +475,8 @@ function toggleLanguage(){
  document.documentElement.lang = language;
 
  document.getElementById("languageBtn").textContent =
-   language === "en" ? "తెలుగు" : "English";
+   language === "en" ? "తెలుగు" : "English"; 
+  updateFavoritesButton();
 
  document.querySelectorAll("[data-en]").forEach(el=>{
    el.textContent = el.dataset[language];
@@ -484,20 +508,69 @@ const categoryNames = {
 }
 
 
-function setCategory(category,button){
- activeCategory = category;
- document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
- button.classList.add("active");
- renderRecipes();
-}
+function setCategory(category, button) {
+  activeCategory = category;
 
+  document.querySelectorAll(".filter").forEach(b =>
+    b.classList.remove("active")
+  );
+
+  button.classList.add("active");
+  renderRecipes();
+}
+function showFavorites(button) {
+  activeCategory = "Favorites";
+
+  document.querySelectorAll(".filter").forEach(b =>
+    b.classList.remove("active")
+  );
+
+  button.classList.add("active");
+  renderRecipes();
+}
+let savedFavorites = JSON.parse(
+  localStorage.getItem("vantamitraFavorites") || "[]"
+); 
+function updateFavoritesButton() {
+  const count = savedFavorites.length;
+
+  document.getElementById("favoritesFilter").textContent =
+    language === "en"
+      ? `♡ My Favourites (${count})`
+      : `♡ నాకు ఇష్టమైన వంటకాలు (${count})`;
+}
+function toggleFavorite(event, recipeId) {
+  event.stopPropagation();
+
+  recipeId = String(recipeId);
+
+  if (savedFavorites.includes(recipeId)) {
+    savedFavorites = savedFavorites.filter(id => id !== recipeId);
+  } else {
+    savedFavorites.push(recipeId);
+  }
+
+  localStorage.setItem(
+    "vantamitraFavorites",
+    JSON.stringify(savedFavorites)
+  ); 
+  updateFavoritesButton();
+
+  renderRecipes();
+}
 function renderRecipes(){
  const term = document.getElementById("searchInput").value.toLowerCase().trim();
  const filtered = recipes.filter(r=>{
    const title = language === "en" ? r.title : r.teTitle;
    const desc = language === "en" ? r.description : r.teDescription;
    const matchesText = (title+" "+desc+" "+r.category+" "+r.teTitle).toLowerCase().includes(term);
-   return (activeCategory === "All" || r.category === activeCategory) && matchesText;
+   return (
+  (activeCategory === "All" ||
+   (activeCategory === "Favorites"
+     ? savedFavorites.includes(String(r.id))
+     : r.category === activeCategory)) &&
+  matchesText
+);
  });
  const grid = document.getElementById("recipeGrid");
  grid.innerHTML = "";
@@ -522,9 +595,14 @@ const categoryNames = {
 
 const category = categoryNames[r.category]?.[language] || r.category;
    card.innerHTML = `
-     <div class="recipe-img" style="background-image:url('${r.image}')">
-       <span class="recipe-tag">${category}</span>
-     </div>
+    <div class="recipe-img" style="background-image:url('${r.image}')">
+  <span class="recipe-tag">${category}</span>
+
+  <button class="favorite-btn"
+    onclick="toggleFavorite(event, '${r.id}')">
+    ${savedFavorites.includes(String(r.id)) ? "♥" : "♡"}
+  </button>
+</div>
      <div class="recipe-info">
        <h3>${title}</h3>
        <p>${desc}</p>
@@ -718,6 +796,7 @@ document.addEventListener("keydown",event=>{
  if(event.key==="Escape") closeModal();
 });
 renderRecipes();
+updateFavoritesButton();
 const sharedRecipeId = new URLSearchParams(window.location.search).get("recipe");
 
 if (sharedRecipeId) {
