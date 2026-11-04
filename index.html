@@ -107,17 +107,49 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
 }
 
 .share-buttons button {
-  padding: 10px 16px;
-  border: 1px solid #d5dfd0;
-  border-radius: 25px;
-  background: #ffffff;
-  color: #294b35;
-  font-size: 14px;
-  font-weight: 600;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
 }
 
+.share-buttons button:hover {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.social-icon.whatsapp {
+  background: #25D366;
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+}
+
+.social-icon.facebook {
+  background: #1877F2;
+}
+
+.social-icon.x-social {
+  background: #000000;
+}
+
+.social-icon.copy-link {
+  background: #607D68;
+}
+.social-icon svg {
+  width: 23px;
+  height: 23px;
+  display: block;
+}
 .share-buttons button:hover {
   background: #294b35;
   color: #ffffff;
@@ -261,15 +293,45 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
 <button class="print-recipe-btn" onclick="printRecipe()">
   🖨️ Print Recipe
 </button>
-  <div class="share-buttons">
-    <button onclick="shareRecipe('whatsapp')">WhatsApp</button>
-    <button onclick="shareRecipe('instagram')">Instagram</button>
-    <button onclick="shareRecipe('facebook')">Facebook</button>
-    <button onclick="shareRecipe('x')">X</button>
-    <button onclick="shareRecipe('copy')">Copy Link</button>
-  </div>
-</div>
-  </div>
+<div class="share-buttons">
+
+  <button class="social-icon whatsapp"
+    onclick="shareRecipe('whatsapp')" title="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.5l.4-.4.2-.4-.1-.4-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.5.2-.9.2-1-.1-.1-.3-.2-.5-.3z"/>
+    </svg>
+  </button>
+
+  <button class="social-icon instagram"
+    onclick="shareRecipe('instagram')" title="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <button class="social-icon facebook"
+    onclick="shareRecipe('facebook')" title="Facebook">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/>
+    </svg>
+  </button>
+
+  <button class="social-icon x-social"
+    onclick="shareRecipe('x')" title="X">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-5-7.3L5.5 22H2.4l7.3-8.4L1.8 2h6.4l4.5 6.7zM17.8 20h1.7L7.2 3.9H5.4z"/>
+    </svg>
+  </button>
+
+  <button class="social-icon copy-link"
+    onclick="shareRecipe('copy')" title="Copy link">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M10 13a5 5 0 0 0 7.1 0l3-3A5 5 0 0 0 13 3l-1.7 1.7M14 11a5 5 0 0 0-7.1 0l-3 3A5 5 0 0 0 11 21l1.7-1.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
 </div>
 
 <script>
