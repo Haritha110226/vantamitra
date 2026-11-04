@@ -258,7 +258,9 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
     data-te="ఈ రెసిపీని షేర్ చేయండి">
   Share this recipe
 </h3>
-
+<button class="print-recipe-btn" onclick="printRecipe()">
+  🖨️ Print Recipe
+</button>
   <div class="share-buttons">
     <button onclick="shareRecipe('whatsapp')">WhatsApp</button>
     <button onclick="shareRecipe('instagram')">Instagram</button>
@@ -749,6 +751,110 @@ const recipeUrl = "https://haritha110226.github.io/vantamitra/?recipe=" + active
         alert("Please copy the recipe link from your browser address bar.");
       });
   }
+} 
+function printRecipe() {
+  if (!activeRecipe) return;
+
+  const title = language === "en"
+    ? activeRecipe.title
+    : activeRecipe.teTitle;
+
+  const ingredients = language === "en"
+    ? activeRecipe.ingredients
+    : activeRecipe.teIngredients;
+
+  const steps = language === "en"
+    ? activeRecipe.steps
+    : activeRecipe.teSteps;
+
+  const tip = language === "en"
+    ? activeRecipe.tip
+    : activeRecipe.teTip;
+
+  const recipeImage = activeRecipe.image;
+
+  const printWindow = window.open("", "_blank");
+
+  if (!printWindow) {
+    alert("Please allow pop-ups to print this recipe.");
+    return;
+  }
+
+  const ingredientList = ingredients.map(item =>
+    `<li>${scaleIngredient(item, activeRecipe.servings, currentServings)}</li>`
+  ).join("");
+
+  const stepList = steps.map(step =>
+    `<li>${step}</li>`
+  ).join("");
+
+  printWindow.document.write(`
+    <!DOCTYPE html>
+    <html lang="${language}">
+    <head>
+      <meta charset="UTF-8">
+      <title>${title} - VantaMitra</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          max-width: 750px;
+          margin: 30px auto;
+          padding: 20px;
+          color: #294b35;
+          line-height: 1.7;
+        }
+        h1, h2 {
+          color: #294b35;
+        }
+        img {
+          width: 100%;
+          max-height: 300px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+        li {
+          margin-bottom: 8px;
+        }
+        .tip {
+          background: #f3f5ed;
+          padding: 15px;
+          border-radius: 10px;
+        }
+        @media print {
+          body { margin: 10px; }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>${title}</h1>
+      <img src="${recipeImage}" alt="${title}">
+
+      <p>
+        ${language === "en" ? "Servings" : "సర్వింగ్స్"}:
+        ${currentServings}
+      </p>
+
+      <h2>${language === "en" ? "Ingredients" : "కావలసిన పదార్థాలు"}</h2>
+      <ul>${ingredientList}</ul>
+
+      <h2>${language === "en" ? "Preparation" : "తయారీ విధానం"}</h2>
+      <ol>${stepList}</ol>
+
+      <h2>${language === "en" ? "Beginner's Tip" : "ప్రారంభకులకు చిట్కా"}</h2>
+      <p class="tip">${tip}</p>
+
+      <p>VantaMitra · వంటమిత్ర</p>
+
+      <script>
+        window.onload = function() {
+          window.print();
+        };
+      <\/script>
+    </body>
+    </html>
+  `);
+
+  printWindow.document.close();
 }
 function openRecipe(id){
  const r = recipes.find(item=>item.id===id);
