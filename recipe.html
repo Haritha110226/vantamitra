@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe | VantaMitra – వంటమిత్ర</title>
+<meta name="description" content="Explore easy homemade recipes in English and Telugu with step-by-step cooking instructions.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#faf7ef;color:#263b2d;font-family:Arial,sans-serif;line-height:1.6}
+header{background:#244b35;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header a{color:white;text-decoration:none;font-weight:bold}
+button{cursor:pointer;border:0;border-radius:7px;padding:10px 15px;background:#315d40;color:white}
+main{max-width:850px;margin:30px auto;padding:0 18px}
+.recipe{background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 16px #00000012}
+.recipe img{width:100%;max-height:390px;object-fit:cover;display:block}
+.content{padding:25px}
+h1{line-height:1.3}
+.meta{color:#687568}
+.servings{display:flex;align-items:center;gap:14px;margin:20px 0}
+.servings button{padding:6px 13px;font-size:18px}
+li{margin-bottom:10px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.tip{background:#f0f5ed;padding:15px;border-radius:9px}
+footer{text-align:center;padding:25px;color:#687568}
+@media print{
+header,.actions,.servings,footer{display:none!important}
+body{background:white}
+.recipe{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html">🌿 VantaMitra | వంటమిత్ర</a>
+<button onclick="toggleLanguage()" id="languageButton">తెలుగు</button>
+</header>
+
+<main>
+<div class="recipe" id="recipeContent">
+<p class="content">Loading recipe...</p>
+</div>
+<div class="actions">
+<button onclick="window.print()" id="printButton">🖨️ Print Recipe</button>
+<button onclick="shareRecipe()" id="shareButton">Share Recipe</button>
+<button onclick="window.location.href='index.html'" id="backButton">← All Recipes</button>
+</div>
+</main>
+
+<footer>© VantaMitra | వంటమిత్ర</footer>
+
+<script src="recipes-data.js"></script>
+<script>
+let language = "en";
+let currentServings = 2;
+let activeRecipe = null;
+
+const id = new URLSearchParams(window.location.search).get("recipe");
+
+function scaleIngredient(item, originalServings, selectedServings){
+  const match = item.match(/^(\s*)(\d+(?:\.\d+)?|[½¼¾⅓⅔])(?:\s*([½¼¾⅓⅔]))?(\s+.*)$/);
+  if(!match) return item;
+
+  const fractions = {"½":0.5,"¼":0.25,"¾":0.75,"⅓":1/3,"⅔":2/3};
+  let quantity = fractions[match[2]] ?? Number(match[2]);
+  if(match[3]) quantity += fractions[match[3]];
+
+  const adjusted = quantity * selectedServings / originalServings;
+  const result = Number(adjusted.toFixed(2)).toString();
+  return match[1] + result + match[4];
+}
+
+function renderRecipe(){
+  if(!activeRecipe){
+    document.getElementById("recipeContent").innerHTML =
+      "<div class='content'><h1>Recipe not found</h1><a href='index.html'>Return to recipes</a></div>";
+    return;
+  }
+
+  const r = activeRecipe;
+  const title = language === "en" ? r.title : r.teTitle;
+  const description = language === "en" ? r.description : r.teDescription;
+  const ingredients = language === "en" ? r.ingredients : r.teIngredients;
+  const steps = language === "en" ? r.steps : r.teSteps;
+  const tip = language === "en" ? r.tip : (r.teTip || r.tip);
+
+  document.documentElement.lang = language;
+  document.title = title + " | VantaMitra – వంటమిత్ర";
+
+  document.getElementById("languageButton").textContent =
+    language === "en" ? "తెలుగు" : "English";
+
+  document.getElementById("printButton").textContent =
+    language === "en" ? "🖨️ Print Recipe" : "🖨️ రెసిపీ ప్రింట్";
+
+  document.getElementById("shareButton").textContent =
+    language === "en" ? "Share Recipe" : "రెసిపీ షేర్";
+
+  document.getElementById("backButton").textContent =
+    language === "en" ? "← All Recipes" : "← అన్ని వంటకాలు";
+
+  document.getElementById("recipeContent").innerHTML = `
+    <img src="${r.image}" alt="${title}">
+    <div class="content">
+      <p class="meta">${r.category} · ${r.time}</p>
+      <h1>${title}</h1>
+      <p>${description}</p>
+      <p class="meta">${language === "en" ? "Preparation" : "తయారీ సమయం"}: ${r.prepTime}</p>
+
+      <div class="servings">
+        <strong>${language === "en" ? "Servings" : "ఎంతమందికి"}:</strong>
+        <button onclick="changeServings(-1)">−</button>
+        <strong id="servingCount">${currentServings}</strong>
+        <button onclick="changeServings(1)">+</button>
+      </div>
+
+      <h2>${language === "en" ? "Ingredients" : "కావలసిన పదార్థాలు"}</h2>
+      <ul>${ingredients.map(x => `<li>${scaleIngredient(x,r.servings,currentServings)}</li>`).join("")}</ul>
+
+      <h2>${language === "en" ? "Step-by-step method" : "తయారీ విధానం"}</h2>
+      <ol>${steps.map(x => `<li>${x}</li>`).join("")}</ol>
+
+      <h2>${language === "en" ? "Beginner's tip" : "చిన్న చిట్కా"}</h2>
+      <p class="tip">${tip}</p>
+    </div>`;
+}
+
+function changeServings(change){
+  currentServings = Math.max(1,currentServings + change);
+  renderRecipe();
+}
+
+function toggleLanguage(){
+  language = language === "en" ? "te" : "en";
+  renderRecipe();
+}
+
+function shareRecipe(){
+  const url = window.location.href;
+  const title = language === "en" ? activeRecipe.title : activeRecipe.teTitle;
+  const message = title + " - VantaMitra\n" + url;
+
+  if(navigator.share){
+    navigator.share({title:title,text:message,url:url}).catch(()=>{});
+  }else if(navigator.clipboard){
+    navigator.clipboard.writeText(message)
+      .then(()=>alert(language === "en" ? "Recipe link copied!" : "రెసిపీ లింక్ కాపీ అయింది!"));
+  }else{
+    prompt("Copy this recipe link:",url);
+  }
+}
+
+activeRecipe = recipes.find(r => String(r.id) === id);
+if(activeRecipe) currentServings = activeRecipe.servings;
+renderRecipe();
+</script>
+</body>
+</html>
