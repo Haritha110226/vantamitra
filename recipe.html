@@ -88,6 +88,11 @@ function renderRecipe(){
 
   document.documentElement.lang = language;
   document.title = title + " | VantaMitra – వంటమిత్ర";
+  const metaDescription = document.querySelector('meta[name="description"]');
+
+if (metaDescription) {
+  metaDescription.setAttribute("content", description);
+}
 
   document.getElementById("languageButton").textContent =
     language === "en" ? "తెలుగు" : "English";
