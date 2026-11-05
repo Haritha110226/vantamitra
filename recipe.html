@@ -157,21 +157,28 @@ if(activeRecipe) currentServings = activeRecipe.servings;
 if (activeRecipe) {
   const r = activeRecipe;
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Recipe",
-    "name": r.title,
-    "description": r.description,
-    "image": "https://haritha110226.github.io/vantamitra/" + r.image,
-    "recipeIngredient": r.ingredients,
-    "recipeInstructions": r.steps.map(step => ({
-      "@type": "HowToStep",
-      "text": step
-    })),
-    "recipeYield": r.servings + " servings",
-    "prepTime": "PT" + (parseInt(r.prepTime) || 0) + "M"
-  };
-
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": r.title,
+  "description": r.description,
+  "image": "https://haritha110226.github.io/vantamitra/" + r.image,
+  "author": {
+    "@type": "Organization",
+    "name": "VantaMitra"
+  },
+  "recipeCategory": r.category,
+  "recipeCuisine": "Indian",
+  "keywords": r.title + ", " + r.category + ", homemade Indian recipes",
+  "recipeIngredient": r.ingredients,
+  "recipeInstructions": r.steps.map(step => ({
+    "@type": "HowToStep",
+    "text": step
+  })),
+  "recipeYield": r.servings + " servings",
+  "prepTime": "PT" + (parseInt(r.prepTime) || 0) + "M",
+  "inLanguage": "en"
+};
   const schemaScript = document.createElement("script");
   schemaScript.type = "application/ld+json";
   schemaScript.textContent = JSON.stringify(schema);
