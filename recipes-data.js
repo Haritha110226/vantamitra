@@ -115,17 +115,83 @@ teTip:"బియ్యం రకం, పాతదా కొత్తదా అ�
  teTip:"బియ్యం, నీరు కొలవడానికి ఒకే గ్లాసును ఉపయోగించండి. బియ్యం రకం, పాత్రను బట్టి ఉడికే సమయం మారవచ్చు. స్టవ్ ఆఫ్ చేసే ముందు బియ్యం పూర్తిగా ఉడికిందో చూడండి."
 },
 {
- id:4, category:"Curries", time:"30 min", level:"Easy",prepTime:"10 min", servings:2,
- title:"Simple Potato Fry", teTitle:"బంగాళాదుంప వేపుడు",
- description:"A homestyle potato side dish with simple everyday spices.",
- teDescription:"ఇంట్లో ఉండే మసాలాలతో చేసే బంగాళాదుంప వేపుడు.",
-image:"images/potato-fry.png",
- ingredients:["3 medium potatoes","1 small onion (optional)","½ tsp mustard seeds","½ tsp chilli powder","¼ tsp turmeric","1 tbsp oil","Salt to taste"],
- teIngredients:["3 మధ్యస్థ బంగాళాదుంపలు","1 చిన్న ఉల్లిపాయ (ఐచ్ఛికం)","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ కారం","¼ టీ స్పూన్ పసుపు","1 టేబుల్ స్పూన్ నూనె","తగినంత ఉప్పు"],
- steps:["Wash, peel and cut potatoes into small even cubes.","Heat oil in a pan. Add mustard seeds.","Add onion if using, and cook until soft.","Add potatoes, turmeric and salt. Mix well.","Cover and cook on low-medium heat for 12–15 minutes, stirring occasionally.","Add chilli powder and cook uncovered for 3–4 minutes until lightly crisp."],
- teSteps:["బంగాళాదుంపలను కడిగి తొక్క తీసి చిన్న ముక్కలుగా కోయండి.","బాణలిలో నూనె వేడి చేసి ఆవాలు వేయండి.","ఉల్లిపాయ వాడితే వేసి మెత్తబడే వరకు వేయించండి.","బంగాళాదుంపలు, పసుపు, ఉప్పు వేసి కలపండి.","మూతపెట్టి తక్కువ-మధ్యస్థ మంటపై 12–15 నిమిషాలు ఉడికించండి.","కారం వేసి మూత లేకుండా మరో 3–4 నిమిషాలు వేయించండి."],
-tip:"Cut potatoes into similar-sized pieces so they cook evenly. Stir gently to avoid breaking them.",
-teTip:"బంగాళాదుంప ముక్కలన్నీ ఒకే పరిమాణంలో కోయండి. అప్పుడు సమానంగా ఉడుకుతాయి. ముక్కలు విరిగిపోకుండా మెల్లగా కలపండి."
+ id:4,
+ category:"Curries",
+ time:"30 min",
+ level:"Easy",
+ prepTime:"10 min",
+ servings:2,
+
+ title:"VantaMitra Signature Potato Fry",
+ teTitle:"వంటమిత్ర ప్రత్యేక ఆలూ ఫ్రై",
+
+ description:"A delicious homemade potato fry prepared with mustard, cumin, curry leaves and fresh coriander using a simple low-flame cooking method.",
+
+ teDescription:"ఆవాలు, జీలకర్ర, కరివేపాకు మరియు తాజా కొత్తిమీరతో తక్కువ మంటపై ఇంటి పద్ధతిలో చేసే రుచికరమైన ఆలూ ఫ్రై.",
+
+ image:"images/potato-fry.png",
+
+ ingredients:[
+  "250 g potatoes",
+  "1 small onion",
+  "½ tsp ginger-garlic paste",
+  "2 tsp oil",
+  "¼ tsp mustard seeds",
+  "¼ tsp cumin seeds",
+  "10 curry leaves",
+  "¼ tsp turmeric powder",
+  "1 tsp chilli powder",
+  "Salt as required",
+  "1 small bunch fresh coriander"
+ ],
+
+ teIngredients:[
+  "250 గ్రాముల బంగాళాదుంపలు",
+  "1 చిన్న ఉల్లిపాయ",
+  "½ టీ స్పూన్ అల్లం వెల్లుల్లి పేస్ట్",
+  "2 టీ స్పూన్ల నూనె",
+  "¼ టీ స్పూన్ ఆవాలు",
+  "¼ టీ స్పూన్ జీలకర్ర",
+  "10 కరివేపాకులు",
+  "¼ టీ స్పూన్ పసుపు",
+  "1 టీ స్పూన్ కారం",
+  "తగినంత ఉప్పు",
+  "1 చిన్న కట్ట తాజా కొత్తిమీర"
+ ],
+
+ steps:[
+  "Cut the potatoes into small pieces. Wash them thoroughly and keep them immersed in water.",
+  "Chop the onion.",
+  "Heat oil in a cooking vessel. Add mustard seeds and cumin seeds.",
+  "Add curry leaves and chopped onion. Sauté well.",
+  "Add ginger-garlic paste and sauté for 1 minute.",
+  "Add potatoes and sauté well for 1–2 minutes.",
+  "Cover with a lid and cook for 3 minutes.",
+  "Add turmeric powder and chilli powder. Mix well and cook on low flame, stirring carefully to prevent the pan from burning.",
+  "Add salt and mix well for 3 minutes.",
+  "Cover with a lid and cook for another 3 minutes.",
+  "Add freshly chopped coriander leaves and mix for 1 minute.",
+  "Cover and rest for 1 minute. Switch off the flame and serve hot with plain rice."
+ ],
+
+ teSteps:[
+  "బంగాళాదుంపలను చిన్న ముక్కలుగా కోసి, బాగా కడిగి నీటిలో ఉంచండి.",
+  "ఉల్లిపాయను చిన్నగా కోసుకోండి.",
+  "వంట పాత్రలో నూనె వేడి చేసి ఆవాలు, జీలకర్ర వేయండి.",
+  "కరివేపాకు, తరిగిన ఉల్లిపాయ వేసి బాగా వేయించండి.",
+  "అల్లం వెల్లుల్లి పేస్ట్ వేసి 1 నిమిషం వేయించండి.",
+  "బంగాళాదుంప ముక్కలు వేసి 1–2 నిమిషాలు బాగా వేయించండి.",
+  "మూతపెట్టి 3 నిమిషాలు ఉడికించండి.",
+  "పసుపు, కారం వేసి బాగా కలపండి. తక్కువ మంటపై, అడుగున మాడకుండా జాగ్రత్తగా కలుపుతూ ఉడికించండి.",
+  "ఉప్పు వేసి 3 నిమిషాలు బాగా కలపండి.",
+  "మళ్లీ మూతపెట్టి 3 నిమిషాలు ఉడికించండి.",
+  "తాజాగా తరిగిన కొత్తిమీర వేసి 1 నిమిషం కలపండి.",
+  "మూతపెట్టి 1 నిమిషం ఉంచండి. తర్వాత స్టవ్ ఆపి వేడి వేడి అన్నంతో వడ్డించండి."
+ ],
+
+ tip:"Cook on low flame after adding the spice powders and stir carefully to prevent the potatoes from sticking or burning. Enjoy with plain rice!",
+
+ teTip:"మసాలాలు వేసిన తర్వాత తక్కువ మంటపై ఉడికించండి. బంగాళాదుంపలు అడుగున అంటకుండా, మాడకుండా జాగ్రత్తగా కలపండి. వేడి వేడి అన్నంతో తింటే చాలా రుచిగా ఉంటుంది!"
 },
 {
  id:5, category:"Chutneys", time:"10 min", level:"Easy",prepTime:"5 min", servings:3,
