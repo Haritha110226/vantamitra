@@ -329,5 +329,110 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
 
   tip: "Cook on low flame after adding the jaggery syrup. Stir carefully to prevent sticking. Ghee-fried cashews, raisins and cardamom give this Pongal its traditional festive flavour.",
   teTip: "బెల్లం పాకం వేసిన తర్వాత తక్కువ మంటపై ఉడికిస్తూ అడుగున అంటకుండా కలపండి. నెయ్యిలో వేయించిన జీడిపప్పు, ఎండుద్రాక్ష, యాలకులు మంచి పండుగ రుచిని ఇస్తాయి."
+},
+
+{
+  id: 12,
+  category: "Breakfast",
+  time: "15 min",
+  level: "Easy",
+  prepTime: "5 min",
+  servings: 2,
+
+  title: "VantaMitra Special Poha",
+  teTitle: "వంటమిత్ర ప్రత్యేక అటుకుల ఉప్మా",
+
+  description: "A quick and tasty homemade poha with crunchy groundnuts, aromatic spices, curry leaves and a refreshing touch of lemon.",
+  teDescription: "కరకరలాడే వేరుశెనగలు, సువాసనగల మసాలాలు, కరివేపాకు మరియు నిమ్మరసంతో తయారుచేసే రుచికరమైన అటుకుల ఉప్మా.",
+
+  image: "images/poha.png",
+
+  ingredientSections: [
+    {
+      title: "Main Ingredients",
+      teTitle: "ప్రధాన పదార్థాలు",
+      items: [
+        "1 cup poha",
+        "1 small onion",
+        "4 green chillies",
+        "1 small carrot (optional)",
+        "1 spring curry leaves",
+        "1 small bunch coriander leaves",
+        "1 lemon",
+        "½ tsp salt or as required"
+      ],
+      teItems: [
+        "1 కప్పు అటుకులు",
+        "1 చిన్న ఉల్లిపాయ",
+        "4 పచ్చిమిర్చి",
+        "1 చిన్న క్యారెట్ (ఐచ్ఛికం)",
+        "1 రెమ్మ కరివేపాకు",
+        "1 చిన్న కట్ట కొత్తిమీర",
+        "1 నిమ్మకాయ",
+        "½ టీ స్పూన్ ఉప్పు లేదా తగినంత"
+      ]
+    },
+    {
+      title: "Tempering",
+      teTitle: "తాలింపు పదార్థాలు",
+      items: [
+        "4 tsp oil",
+        "½ tsp mustard seeds",
+        "½ tsp cumin seeds",
+        "½ tsp urad dal",
+        "½ tsp chana dal",
+        "2 tsp groundnuts",
+        "A pinch of hing",
+        "¼ tsp turmeric powder",
+        "¼ tsp sugar"
+      ],
+      teItems: [
+        "4 టీ స్పూన్లు నూనె",
+        "½ టీ స్పూన్ ఆవాలు",
+        "½ టీ స్పూన్ జీలకర్ర",
+        "½ టీ స్పూన్ మినప్పప్పు",
+        "½ టీ స్పూన్ శనగపప్పు",
+        "2 టీ స్పూన్లు వేరుశెనగలు",
+        "చిటికెడు ఇంగువ",
+        "¼ టీ స్పూన్ పసుపు",
+        "¼ టీ స్పూన్ చక్కెర"
+      ]
+    }
+  ],
+
+  ingredients: [],
+  teIngredients: [],
+
+  steps: [
+    "Wash the poha under running water 2–3 times and keep it aside.",
+    "Heat a pan and dry-roast the groundnuts. Remove them and keep aside.",
+    "Add oil to the same pan.",
+    "Add mustard seeds, cumin seeds, urad dal and chana dal. Sauté well.",
+    "Add chopped onion, green chillies and curry leaves. Sauté well.",
+    "Add salt, sugar, turmeric powder, fried groundnuts and hing. Mix well.",
+    "If using carrot, add finely chopped carrot and cook until slightly tender.",
+    "Add the washed poha and gently mix everything together.",
+    "Add chopped coriander leaves and mix for 1–2 minutes.",
+    "Squeeze lemon juice over the poha and mix well.",
+    "Switch off the flame and serve hot."
+  ],
+
+  teSteps: [
+    "అటుకులను పారే నీటిలో 2–3 సార్లు కడిగి పక్కన పెట్టుకోవాలి.",
+    "పాన్ వేడి చేసి వేరుశెనగలను వేయించి పక్కన పెట్టుకోవాలి.",
+    "అదే పాన్‌లో నూనె వేయాలి.",
+    "ఆవాలు, జీలకర్ర, మినప్పప్పు, శనగపప్పు వేసి బాగా వేయించాలి.",
+    "తరిగిన ఉల్లిపాయ, పచ్చిమిర్చి, కరివేపాకు వేసి బాగా వేయించాలి.",
+    "ఉప్పు, చక్కెర, పసుపు, వేయించిన వేరుశెనగలు, ఇంగువ వేసి కలపాలి.",
+    "క్యారెట్ ఉపయోగిస్తే సన్నగా తరిగి వేసి కొద్దిగా మెత్తబడే వరకు ఉడికించాలి.",
+    "కడిగి పెట్టుకున్న అటుకులు వేసి అన్నింటినీ మెల్లగా కలపాలి.",
+    "తరిగిన కొత్తిమీర వేసి 1–2 నిమిషాలు కలపాలి.",
+    "నిమ్మరసం పిండి బాగా కలపాలి.",
+    "స్టవ్ ఆఫ్ చేసి వేడివేడిగా వడ్డించాలి."
+  ],
+
+  tip: "Adjust green chillies according to your spice preference. Add lemon juice at the end for a fresh, tangy taste.",
+  teTip: "మీ కారం అభిరుచికి అనుగుణంగా పచ్చిమిర్చి వేసుకోండి. మంచి పుల్లటి రుచి కోసం చివర్లో నిమ్మరసం కలపండి."
 }
+
 ];
