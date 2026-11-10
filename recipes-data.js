@@ -256,5 +256,78 @@ image:"images/onion-pakodi.png",
  steps:["Place sliced onions in a bowl with salt. Mix and rest for 5 minutes.","Add green chilli, curry leaves, chilli powder and turmeric.","Add gram flour and rice flour. Mix well.","Sprinkle a little water only if needed to bind the mixture.","Heat oil in a deep pan on medium heat.","Drop small portions of the mixture carefully into the hot oil.","Fry until golden and crisp. Drain and serve hot."],
  teSteps:["కోసిన ఉల్లిపాయలను గిన్నెలో వేసి ఉప్పు కలిపి 5 నిమిషాలు ఉంచండి.","పచ్చిమిర్చి, కరివేపాకు, కారం, పసుపు వేయండి.","శెనగపిండి, బియ్యప్పిండి వేసి బాగా కలపండి.","మిశ్రమం కలిసేలా అవసరమైతే మాత్రమే కొద్దిగా నీరు చల్లండి.","లోతైన బాణలిలో మధ్యస్థ మంటపై నూనె వేడి చేయండి.","మిశ్రమాన్ని చిన్న చిన్న భాగాలుగా జాగ్రత్తగా వేడి నూనెలో వేయండి.","బంగారు రంగులోకి వచ్చి కరకరలాడే వరకు వేయించి వడ్డించండి."],
  tip:"Do not add too much water. A thick mixture helps make crisp pakodi. Be careful when frying in hot oil.",
-teTip:"ఎక్కువ నీరు కలపకండి. చిక్కటి మిశ్రమంతో పకోడీలు కరకరలాడుతాయి. వేడి నూనెలో వేయించేటప్పుడు జాగ్రత్తగా ఉండండి."}
+teTip:"ఎక్కువ నీరు కలపకండి. చిక్కటి మిశ్రమంతో పకోడీలు కరకరలాడుతాయి. వేడి నూనెలో వేయించేటప్పుడు జాగ్రత్తగా ఉండండి."},
+{
+  id: 11,
+  category: "Sweets",
+  time: "25 min",
+  level: "Easy",
+  prepTime: "5 min",
+  servings: 4,
+
+  title: "Traditional Sweet Pongal",
+  teTitle: "సాంప్రదాయ తీపి పొంగలి",
+
+  description: "Traditional homemade Sweet Pongal with rice, jaggery, milk, ghee, cashews, raisins and cardamom. Perfect for festivals and Naivedhyam.",
+  teDescription: "బియ్యం, బెల్లం, పాలు, నెయ్యి, జీడిపప్పు, ఎండుద్రాక్ష మరియు యాలకులతో చేసే సంప్రదాయ తీపి పొంగలి. పండుగలకు, నైవేద్యానికి అనుకూలం.",
+
+  image: "images/sweet-pongal.png",
+
+  ingredientSections: [
+    {
+      title: "Main Ingredients",
+      teTitle: "ప్రధాన పదార్థాలు",
+      items: ["1 cup rice","2 cups milk","2 cups water"],
+teItems: ["1 కప్పు బియ్యం","2 కప్పులు పాలు","2 కప్పులు నీళ్లు"]
+    },
+    {
+      title: "Jaggery Syrup",
+      teTitle: "బెల్లం పాకం",
+    items: ["2 cups jaggery","1 cup water"],
+teItems: ["2 కప్పులు బెల్లం","1 కప్పు నీళ్లు"]
+    },
+    {
+      title: "Tempering",
+      teTitle: "తాలింపు",
+    items: ["10–15 cashew nuts","2 tsp raisins","2–3 tbsp ghee","¼–½ tsp cardamom powder"],
+teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన్లు ఎండుద్రాక్ష","2–3 టేబుల్ స్పూన్లు నెయ్యి","¼–½ టీ స్పూన్ యాలకుల పొడి"]
+    }
+  ],
+
+  ingredients: [],
+  teIngredients: [],
+
+  steps: [
+    "Wash the rice thoroughly.",
+    "Place a vessel on the stove. Add 2 cups of water and the washed rice.",
+    "Boil for 5–8 minutes.",
+    "Add 2 cups of boiled milk. Mix well and cook on low flame for 3–4 minutes.",
+    "In another vessel, add 2 cups of jaggery and 1 cup of water.",
+    "Wait approximately 5 minutes until the jaggery melts completely. Switch off the flame.",
+    "Add the jaggery syrup to the rice mixture. Mix well and cook on low flame for 5 minutes.",
+    "Switch off the stove.",
+    "In a separate pan, heat ghee on low flame. Add split cashews and sauté for about a minute.",
+    "Add raisins and cardamom powder. Sauté briefly.",
+    "Add the ghee, cashews, raisins and cardamom mixture to the Pongal.",
+    "Mix well and enjoy! Serve during festivals or as Naivedhyam."
+  ],
+
+  teSteps: [
+    "బియ్యాన్ని శుభ్రంగా కడగండి.",
+    "స్టవ్‌పై ఒక పాత్ర పెట్టి 2 కప్పుల నీరు, కడిగిన బియ్యం వేయండి.",
+    "5–8 నిమిషాలు ఉడికించండి.",
+    "2 కప్పుల మరిగించిన పాలు వేసి బాగా కలిపి తక్కువ మంటపై 3–4 నిమిషాలు ఉడికించండి.",
+    "మరో పాత్రలో 2 కప్పుల బెల్లం, 1 కప్పు నీరు వేయండి.",
+    "సుమారు 5 నిమిషాలు బెల్లం పూర్తిగా కరిగే వరకు ఉంచి స్టవ్ ఆపండి.",
+    "బెల్లం పాకాన్ని అన్నం మిశ్రమంలో వేసి బాగా కలిపి తక్కువ మంటపై 5 నిమిషాలు ఉడికించండి.",
+    "స్టవ్ ఆపండి.",
+    "మరో పాన్‌లో తక్కువ మంటపై నెయ్యి వేడి చేసి చీల్చిన జీడిపప్పు వేసి ఒక నిమిషం వేయించండి.",
+    "ఎండుద్రాక్ష, యాలకుల పొడి వేసి కొద్దిసేపు వేయించండి.",
+    "ఈ నెయ్యి మిశ్రమాన్ని పొంగలిలో వేయండి.",
+    "బాగా కలిపి రుచికరమైన పొంగలిని ఆస్వాదించండి. పండుగలకు, నైవేద్యానికి వడ్డించండి."
+  ],
+
+  tip: "Cook on low flame after adding the jaggery syrup. Stir carefully to prevent sticking. Ghee-fried cashews, raisins and cardamom give this Pongal its traditional festive flavour.",
+  teTip: "బెల్లం పాకం వేసిన తర్వాత తక్కువ మంటపై ఉడికిస్తూ అడుగున అంటకుండా కలపండి. నెయ్యిలో వేయించిన జీడిపప్పు, ఎండుద్రాక్ష, యాలకులు మంచి పండుగ రుచిని ఇస్తాయి."
+}
 ];

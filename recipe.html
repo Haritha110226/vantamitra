@@ -180,7 +180,19 @@ if (metaDescription) {
       </div>
 
       <h2>${language === "en" ? "Ingredients" : "కావలసిన పదార్థాలు"}</h2>
-      <ul>${ingredients.map(x => `<li>${r.id === 6 ? x : scaleIngredient(x,r.servings,currentServings)}</li>`).join("")}</ul>
+${r.ingredientSections
+  ? r.ingredientSections.map(section => {
+      const sectionItems = language === "en"
+        ? section.items
+        : (section.teItems || section.items);
+
+      return `
+        <h3>${language === "en" ? section.title : section.teTitle}</h3>
+        <ul>${sectionItems.map(x => `<li>${scaleIngredient(x, r.servings, currentServings)}</li>`).join("")}</ul>
+      `;
+    }).join("")
+  : `<ul>${ingredients.map(x => `<li>${r.id === 6 ? x : scaleIngredient(x,r.servings,currentServings)}</li>`).join("")}</ul>`
+}
       <h2>${language === "en" ? "Step-by-step method" : "తయారీ విధానం"}</h2>
       <ol>${steps.map(x => `<li>${x}</li>`).join("")}</ol>
 

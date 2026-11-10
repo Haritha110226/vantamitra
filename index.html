@@ -248,8 +248,9 @@ New to cooking? No problem. Explore easy homemade Indian and Andhra recipes with
     <button class="filter" data-category="Snacks" onclick="setCategory('Snacks',this)">Snacks</button>
     <button class="filter" data-category="Chutneys" onclick="setCategory('Chutneys',this)">Chutneys</button>
     <button class="filter" data-category="Drinks" onclick="setCategory('Drinks',this)">Drinks</button>
-    <button class="filter" id="favoritesFilter" onclick="showFavorites(this)">♡ My Favourites</button>
-</div>
+    <button class="filter" data-category="Sweets" onclick="setCategory('Sweets',this)">Sweets</button>
+   <button class="filter" id="favoritesFilter" onclick="showFavorites(this)">♡ My Favourites</button>
+  </div>
   <div class="recipe-grid" id="recipeGrid"></div>
   <div class="empty" id="empty">No recipes found. Try another search.</div>
 
@@ -394,7 +395,8 @@ const categoryNames = {
   Dal: { en: "Dal & Sambar", te: "పప్పు & సాంబార్" },
   Snacks: { en: "Snacks", te: "చిరుతిళ్లు" },
   Chutneys: { en: "Chutneys", te: "పచ్చళ్లు" },
-  Drinks: { en: "Drinks", te: "పానీయాలు" }
+  Drinks: { en: "Drinks", te: "పానీయాలు" },
+  Sweets: { en: "Sweets", te: "తీపి వంటకాలు" }
 };
 
 
@@ -493,7 +495,8 @@ const categoryNames = {
   Dal: { en: "Dal & Sambar", te: "పప్పు & సాంబార్" },
   Snacks: { en: "Snacks", te: "చిరుతిళ్లు" },
   Chutneys: { en: "Chutneys", te: "పచ్చళ్లు" },
-  Drinks: { en: "Drinks", te: "పానీయాలు" }
+  Drinks: { en: "Drinks", te: "పానీయాలు" },
+   Sweets: { en: "Sweets", te: "తీపి వంటకాలు" }
 };
 
 const category = categoryNames[r.category]?.[language] || r.category;
