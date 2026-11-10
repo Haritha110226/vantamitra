@@ -58,5 +58,9 @@
   <url>
   <loc>https://haritha110226.github.io/vantamitra/recipe.html?recipe=11</loc>
 </url>
-
+<url>
+  <loc>https://haritha110226.github.io/vantamitra/contact.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.5</priority>
+</url>
 </urlset>
