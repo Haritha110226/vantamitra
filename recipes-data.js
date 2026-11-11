@@ -618,7 +618,104 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
 
   tip: "Roast the semiya on low flame to avoid burning. Add boiling water and stir occasionally while cooking to prevent sticking.",
   teTip: "సేమియా మాడిపోకుండా తక్కువ మంటపై వేయించాలి. మరిగించిన నీళ్లు పోసిన తర్వాత అంటుకోకుండా మధ్య మధ్యలో కలుపుతూ ఉడికించాలి."
+},
+
+{
+  id: 15,
+  category: "Breakfast",
+  time: "5 min",
+  level: "Easy",
+  prepTime: "10 min",
+  servings: 2,
+
+  title: "VantaMitra Special Uggani",
+  teTitle: "వంటమిత్ర ప్రత్యేక ఉగ్గాని",
+
+  description: "A traditional Andhra-style Uggani made with soft puffed rice, roasted chana dal powder, onions, tomatoes, green chillies and aromatic spices. Enjoy it with crispy Mirapakaya Bajji for a delicious combination.",
+  teDescription: "మెత్తగా నానబెట్టిన మరమరాలు, వేయించిన శెనగపిండి, ఉల్లిపాయలు, టమాటాలు, పచ్చిమిర్చి మరియు సువాసనగల మసాలాలతో తయారుచేసే సాంప్రదాయ ఆంధ్ర ఉగ్గాని. కరకరలాడే మిరపకాయ బజ్జీలతో కలిపి ఆస్వాదించండి.",
+
+  image: "images/uggani.png",
+
+  ingredientSections: [
+    {
+      title: "Main Ingredients",
+      teTitle: "ప్రధాన పదార్థాలు",
+      items: [
+        "250 g puffed rice",
+        "2 tbsp roasted chana dal powder",
+        "1 small onion",
+        "5 green chillies",
+        "1 small tomato",
+        "2 sprigs curry leaves",
+        "½ tsp turmeric powder",
+        "Salt as required",
+        "1 lemon (optional)"
+      ],
+      teItems: [
+        "250 గ్రాముల మరమరాలు",
+        "2 టేబుల్ స్పూన్లు వేయించిన శెనగపిండి",
+        "1 చిన్న ఉల్లిపాయ",
+        "5 పచ్చిమిర్చి",
+        "1 చిన్న టమాటా",
+        "2 రెమ్మల కరివేపాకు",
+        "½ టీ స్పూన్ పసుపు",
+        "తగినంత ఉప్పు",
+        "1 నిమ్మకాయ (ఐచ్ఛికం)"
+      ]
+    },
+    {
+      title: "Tempering",
+      teTitle: "తాలింపు పదార్థాలు",
+      items: [
+        "3 tsp oil",
+        "½ tsp mustard seeds",
+        "½ tsp cumin seeds",
+        "½ tsp split urad dal"
+      ],
+      teItems: [
+        "3 టీ స్పూన్లు నూనె",
+        "½ టీ స్పూన్ ఆవాలు",
+        "½ టీ స్పూన్ జీలకర్ర",
+        "½ టీ స్పూన్ మినప్పప్పు"
+      ]
+    }
+  ],
+
+  ingredients: [],
+  teIngredients: [],
+
+  steps: [
+    "Soak the puffed rice in water for 2–3 minutes. Do not soak it for too long, as it may become mushy.",
+    "Squeeze out the excess water and keep the puffed rice aside.",
+    "Finely chop the onion, green chillies and tomato.",
+    "Heat oil in a pan. Add mustard seeds, cumin seeds and split urad dal. Sauté well.",
+    "Add chopped onion and green chillies. Fry well.",
+    "Add chopped tomato and salt. Cook until the tomato softens.",
+    "Add curry leaves, followed by turmeric powder. Mix well.",
+    "Add the soaked puffed rice and gently mix on low flame.",
+    "Add roasted chana dal powder and mix well.",
+    "Squeeze lemon juice over the Uggani if preferred.",
+    "Switch off the flame and serve hot. Enjoy with Mirapakaya Bajji!"
+  ],
+
+  teSteps: [
+    "మరమరాలను 2–3 నిమిషాలు నీటిలో నానబెట్టాలి. ఎక్కువసేపు నానబెట్టకూడదు, అలా చేస్తే మెత్తగా అయిపోతాయి.",
+    "మరమరాల్లోని నీటిని పిండేసి పక్కన పెట్టుకోవాలి.",
+    "ఉల్లిపాయ, పచ్చిమిర్చి, టమాటాను సన్నగా తరిగి పెట్టుకోవాలి.",
+    "పాన్‌లో నూనె వేసి ఆవాలు, జీలకర్ర, మినప్పప్పు వేసి బాగా వేయించాలి.",
+    "తరిగిన ఉల్లిపాయ, పచ్చిమిర్చి వేసి బాగా వేయించాలి.",
+    "తరిగిన టమాటా, ఉప్పు వేసి టమాటా మెత్తబడే వరకు వేయించాలి.",
+    "కరివేపాకు వేసి, తర్వాత పసుపు వేసి బాగా కలపాలి.",
+    "నానబెట్టి నీరు పిండిన మరమరాలు వేసి తక్కువ మంటపై మెల్లగా కలపాలి.",
+    "వేయించిన శెనగపిండి వేసి బాగా కలపాలి.",
+    "ఇష్టమైతే చివర్లో నిమ్మరసం పిండుకోవాలి.",
+    "స్టవ్ ఆఫ్ చేసి వేడివేడిగా వడ్డించాలి. మిరపకాయ బజ్జీలతో కలిపి ఆస్వాదించండి!"
+  ], 
+
+  tip: "Soak puffed rice for only 2–3 minutes and squeeze out excess water. Avoid over-soaking to prevent a mushy texture. Uggani tastes especially good with Mirapakaya Bajji.",
+  teTip: "మరమరాలను 2–3 నిమిషాలు మాత్రమే నానబెట్టి అదనపు నీటిని పిండేయాలి. ఎక్కువసేపు నానబెడితే మెత్తగా అయిపోతాయి. మిరపకాయ బజ్జీలతో ఉగ్గాని చాలా రుచిగా ఉంటుంది."
 }
+
 
 
 
