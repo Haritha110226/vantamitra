@@ -516,7 +516,110 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
   tip: "For crispy Chegodilu, keep the dough neither too hard nor too soft. Do not make the rings too thick or overheat the oil. Fry slowly on medium-to-low flame so they cook well inside. Allow them to cool completely before storing in an airtight container.",
 
   teTip: "కరకరలాడే చెగోడీల కోసం పిండి మరీ గట్టిగా లేదా మెత్తగా ఉండకూడదు. చెగోడీలను మరీ మందంగా చేయకూడదు. నూనెను అతిగా వేడి చేయకూడదు. మీడియం నుంచి తక్కువ మంటపై నెమ్మదిగా వేయించాలి. పూర్తిగా చల్లారిన తర్వాత గాలి చొరబడని డబ్బాలో నిల్వ చేసుకోవాలి."
+},
+
+{
+  id: 14,
+  category: "Breakfast",
+  time: "10 min",
+  level: "Easy",
+  prepTime: "5 min",
+  servings: 2,
+
+  title: "VantaMitra Homestyle Semiya Upma",
+  teTitle: "వంటమిత్ర ఇంటి స్టైల్ సేమియా ఉప్మా",
+
+  description: "A quick homemade semiya upma with roasted vermicelli, crunchy peanuts, lentils, green chillies and aromatic curry leaves. An easy and tasty breakfast for busy mornings.",
+  teDescription: "వేయించిన సేమియా, కరకరలాడే వేరుశెనగలు, పప్పులు, పచ్చిమిర్చి మరియు సువాసనగల కరివేపాకుతో తయారుచేసే రుచికరమైన ఇంటి స్టైల్ సేమియా ఉప్మా.",
+
+  image: "images/semiya-upma.png",
+
+  ingredientSections: [
+    {
+      title: "Main Ingredients",
+      teTitle: "ప్రధాన పదార్థాలు",
+      items: [
+        "1 cup semiya (vermicelli)",
+        "1½ cups water",
+        "1 small onion",
+        "5 green chillies",
+        "1 inch ginger",
+        "1 spring curry leaves",
+        "Salt as required"
+      ],
+      teItems: [
+        "1 కప్పు సేమియా",
+        "1½ కప్పుల నీళ్లు",
+        "1 చిన్న ఉల్లిపాయ",
+        "5 పచ్చిమిర్చి",
+        "1 అంగుళం అల్లం",
+        "1 రెమ్మ కరివేపాకు",
+        "తగినంత ఉప్పు"
+      ]
+    },
+    {
+      title: "Tempering",
+      teTitle: "తాలింపు పదార్థాలు",
+      items: [
+        "2 tsp oil",
+        "2 tsp peanuts",
+        "1 tsp cumin seeds",
+        "½ tsp mustard seeds",
+        "1 tsp chana dal",
+        "1 tsp split urad dal",
+        "2 dried red chillies",
+        "A pinch of hing"
+      ],
+      teItems: [
+        "2 టీ స్పూన్లు నూనె",
+        "2 టీ స్పూన్లు వేరుశెనగలు",
+        "1 టీ స్పూన్ జీలకర్ర",
+        "½ టీ స్పూన్ ఆవాలు",
+        "1 టీ స్పూన్ శనగపప్పు",
+        "1 టీ స్పూన్ మినప్పప్పు",
+        "2 ఎండు మిరపకాయలు",
+        "చిటికెడు ఇంగువ"
+      ]
+    }
+  ],
+
+  ingredients: [],
+  teIngredients: [],
+
+  steps: [
+    "Finely chop the onion, green chillies and ginger.",
+    "Take semiya in a pan and roast it on low flame until lightly roasted. Keep aside.",
+    "Meanwhile, heat water in another vessel and bring it to a boil.",
+    "In the same pan, add oil and fry the peanuts.",
+    "Add chana dal and split urad dal. Fry well.",
+   "Add cumin seeds and mustard seeds and allow them to splutter. Add dried red chillies and fry briefly.",
+    "Add chopped onion and fry. Then add green chillies and ginger and sauté well.",
+    "Add hing and salt. You can add the salt at this stage or directly to the boiling water.",
+    "Add the roasted semiya and mix well.",
+    "Pour in the boiling water and mix thoroughly.",
+    "Cover with a lid and cook for about 5 minutes, stirring occasionally.",
+    "Switch off the flame and enjoy your hot homemade semiya upma."
+  ],
+
+  teSteps: [
+    "ఉల్లిపాయ, పచ్చిమిర్చి, అల్లం చిన్న చిన్న ముక్కలుగా తరిగి పెట్టుకోవాలి.",
+    "ఒక పాన్‌లో సేమియా వేసి తక్కువ మంటపై తేలికగా వేయించి పక్కన పెట్టుకోవాలి.",
+    "మరో గిన్నెలో నీళ్లు పోసి మరిగించాలి.",
+    "అదే పాన్‌లో నూనె వేసి వేరుశెనగలను వేయించాలి.",
+    "శనగపప్పు, మినప్పప్పు వేసి బాగా వేయించాలి.",
+    "జీలకర్ర, ఆవాలు వేసి చిటపటలాడనివ్వాలి. తర్వాత ఎండు మిరపకాయలు వేసి కొద్దిగా వేయించాలి.",
+    "తరిగిన ఉల్లిపాయ వేసి వేయించాలి. తర్వాత పచ్చిమిర్చి, అల్లం వేసి బాగా వేయించాలి.",
+    "ఇంగువ, ఉప్పు వేసి కలపాలి. ఉప్పును ఈ దశలో లేదా మరిగే నీటిలో కూడా వేసుకోవచ్చు.",
+    "వేయించిన సేమియా వేసి బాగా కలపాలి.",
+    "మరిగించిన నీళ్లు పోసి బాగా కలపాలి.",
+    "మూత పెట్టి సుమారు 5 నిమిషాలు ఉడికించాలి. మధ్య మధ్యలో కలుపుతూ ఉండాలి.",
+    "స్టవ్ ఆఫ్ చేసి వేడివేడిగా సేమియా ఉప్మాను ఆస్వాదించండి."
+  ],
+
+  tip: "Roast the semiya on low flame to avoid burning. Add boiling water and stir occasionally while cooking to prevent sticking.",
+  teTip: "సేమియా మాడిపోకుండా తక్కువ మంటపై వేయించాలి. మరిగించిన నీళ్లు పోసిన తర్వాత అంటుకోకుండా మధ్య మధ్యలో కలుపుతూ ఉడికించాలి."
 }
+
 
 
 ];
