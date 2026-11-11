@@ -255,7 +255,9 @@ const schema = {
   "recipeCategory": r.category,
   "recipeCuisine": "Indian",
   "keywords": r.title + ", " + r.category + ", homemade Indian recipes",
-  "recipeIngredient": r.ingredients,
+"recipeIngredient": r.ingredientSections?.length
+  ? r.ingredientSections.flatMap(section => section.items || [])
+  : (r.ingredients || []),
   "recipeInstructions": r.steps.map(step => ({
     "@type": "HowToStep",
     "text": step
