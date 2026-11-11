@@ -433,6 +433,90 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
 
   tip: "Adjust green chillies according to your spice preference. Add lemon juice at the end for a fresh, tangy taste.",
   teTip: "మీ కారం అభిరుచికి అనుగుణంగా పచ్చిమిర్చి వేసుకోండి. మంచి పుల్లటి రుచి కోసం చివర్లో నిమ్మరసం కలపండి."
+},
+
+{
+  id: 13,
+  category: "Snacks",
+  time: "20 min",
+  level: "Easy",
+  prepTime: "20 min",
+  servings: 4,
+
+  title: "Andhra Crispy Chegodilu",
+  teTitle: "ఆంధ్ర క్రిస్పీ చెగోడీలు",
+
+  description: "Traditional Andhra-style crispy Chegodilu made with rice flour, roasted chana dal powder, sesame seeds and aromatic spices. A crunchy homemade snack perfect for tea time and festivals.",
+  teDescription: "బియ్యప్పిండి, వేయించిన శెనగపిండి, నువ్వులు మరియు సువాసనగల మసాలాలతో తయారుచేసే సాంప్రదాయ ఆంధ్ర క్రిస్పీ చెగోడీలు. టీ సమయానికి మరియు పండుగలకు చక్కని ఇంటి చిరుతిండి.",
+
+  image: "images/chegodilu.png",
+
+  ingredientSections: [
+    {
+      title: "Main Ingredients",
+      teTitle: "ప్రధాన పదార్థాలు",
+      items: [
+        "1 cup rice flour",
+        "2 tbsp roasted chana dal powder",
+        "1 tbsp sesame seeds",
+        "½ tsp cumin seeds",
+        "½ tsp chilli powder",
+        "A pinch of hing",
+        "Salt as required",
+        "1 tbsp ghee or hot oil",
+        "1 cup water",
+        "Oil for deep frying"
+      ],
+      teItems: [
+        "1 కప్పు బియ్యప్పిండి",
+        "2 టేబుల్ స్పూన్లు వేయించిన శెనగపిండి",
+        "1 టేబుల్ స్పూన్ నువ్వులు",
+        "½ టీ స్పూన్ జీలకర్ర",
+        "½ టీ స్పూన్ కారం",
+        "చిటికెడు ఇంగువ",
+        "తగినంత ఉప్పు",
+        "1 టేబుల్ స్పూన్ నెయ్యి లేదా వేడి నూనె",
+        "1 కప్పు నీళ్లు",
+        "డీప్ ఫ్రై చేయడానికి నూనె"
+      ]
+    }
+  ],
+
+  ingredients: [],
+  teIngredients: [],
+
+  steps: [
+    "Take water in a vessel. Add salt and hing and bring it to a boil.",
+    "Reduce the flame and add rice flour and roasted chana dal powder.",
+    "Mix well without forming lumps. Cover with a lid and cook for 3–4 minutes.",
+    "While the flour mixture is still warm, add sesame seeds, cumin seeds and chilli powder. Mix well.",
+    "Apply a little oil to your hands and gently knead the dough.",
+    "Take small portions of dough and roll them into long, thin ropes.",
+    "Join both ends to form small round Chegodilu rings.",
+    "Cover the prepared Chegodilu with a damp cloth.",
+    "Heat oil in a kadai and reduce the flame to medium.",
+    "Add the Chegodilu in small batches and fry slowly.",
+    "Fry until golden brown and crispy. Remove and drain the excess oil."
+  ],
+
+  teSteps: [
+    "ఒక గిన్నెలో నీళ్లు పోసి ఉప్పు, ఇంగువ వేసి మరిగించాలి.",
+    "నీళ్లు మరిగిన తర్వాత మంట తగ్గించి బియ్యప్పిండి, వేయించిన శెనగపిండి వేయాలి.",
+    "ఉండలు లేకుండా బాగా కలిపి మూత పెట్టి 3–4 నిమిషాలు ఉడికించాలి.",
+    "పిండి ఇంకా వేడిగా ఉన్నప్పుడే నువ్వులు, జీలకర్ర, కారం వేసి బాగా కలపాలి.",
+    "చేతులకు కొద్దిగా నూనె రాసుకుని పిండిని మెత్తగా మర్దన చేయాలి.",
+    "చిన్న చిన్న ఉండలు తీసుకుని పొడవుగా చుట్టాలి.",
+    "చివర్లను కలిపి గుండ్రంగా చెగోడీల ఆకారంలో తయారు చేయాలి.",
+    "తయారుచేసిన చెగోడీలను తడి వస్త్రంతో కప్పి ఉంచాలి.",
+    "బాణలిలో నూనె వేడి చేసి మంటను మీడియంకు తగ్గించాలి.",
+    "చెగోడీలను కొద్దికొద్దిగా వేసి నెమ్మదిగా వేయించాలి.",
+    "బంగారు రంగులోకి మారి కరకరలాడే వరకు వేయించి తీసేయాలి."
+  ],
+
+  tip: "For crispy Chegodilu, keep the dough neither too hard nor too soft. Do not make the rings too thick or overheat the oil. Fry slowly on medium-to-low flame so they cook well inside. Allow them to cool completely before storing in an airtight container.",
+
+  teTip: "కరకరలాడే చెగోడీల కోసం పిండి మరీ గట్టిగా లేదా మెత్తగా ఉండకూడదు. చెగోడీలను మరీ మందంగా చేయకూడదు. నూనెను అతిగా వేడి చేయకూడదు. మీడియం నుంచి తక్కువ మంటపై నెమ్మదిగా వేయించాలి. పూర్తిగా చల్లారిన తర్వాత గాలి చొరబడని డబ్బాలో నిల్వ చేసుకోవాలి."
 }
+
 
 ];
