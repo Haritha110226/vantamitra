@@ -15,7 +15,7 @@ teTip:"రవ్వ వేస్తున్నప్పుడు గడ్డ�
 },
 {
  id:2, category:"Breakfast", time:"15 min", level:"Easy",prepTime:"5 min", servings:2,
- title:"Quick Plain Dosa", teTitle:"సులభమైన దోసె",
+ title:"Instant Dosa", teTitle:"సులభమైన దోసె",
  description:"Crispy, golden dosa for a quick and satisfying breakfast.",
  teDescription:"బయట కరకరలాడుతూ లోపల మెత్తగా ఉండే దోసె.",
 image:"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80",
@@ -194,18 +194,68 @@ teTip:"బియ్యం రకం, పాతదా కొత్తదా అ�
  teTip:"మసాలాలు వేసిన తర్వాత తక్కువ మంటపై ఉడికించండి. బంగాళాదుంపలు అడుగున అంటకుండా, మాడకుండా జాగ్రత్తగా కలపండి. వేడి వేడి అన్నంతో తింటే చాలా రుచిగా ఉంటుంది!"
 },
 {
- id:5, category:"Chutneys", time:"10 min", level:"Easy",prepTime:"5 min", servings:3,
+ id:5, category:"Chutneys", time:"10 min", level:"Easy", prepTime:"5 min", servings:3,
  title:"Coconut Chutney", teTitle:"కొబ్బరి చట్నీ",
  description:"A fresh, creamy South Indian chutney for dosa and idli.",
  teDescription:"ఇడ్లీ, దోసెలకు సరిపోయే తాజా కొబ్బరి చట్నీ.",
-image:"images/coconut-chutney.png",
- ingredients:["1 cup fresh grated coconut","2 tbsp roasted gram (putnalu)","1 green chilli","Small piece of ginger","Salt to taste","½ cup water","For tempering: oil, mustard seeds and curry leaves"],
- teIngredients:["1 కప్పు తురిమిన కొబ్బరి","2 టేబుల్ స్పూన్ల పుట్నాలు","1 పచ్చిమిర్చి","చిన్న అల్లం ముక్క","తగినంత ఉప్పు","½ కప్పు నీరు","తాలింపు కోసం నూనె, ఆవాలు, కరివేపాకు"],
- steps:["Add coconut, roasted gram, green chilli, ginger and salt to a mixer jar.","Add a little water and grind to a smooth paste.","Adjust water to get your preferred consistency.","Heat a teaspoon of oil in a small pan.","Add mustard seeds and curry leaves. Let them splutter.","Pour the tempering over the chutney and mix."],
- teSteps:["కొబ్బరి, పుట్నాలు, పచ్చిమిర్చి, అల్లం, ఉప్పు మిక్సీ జార్‌లో వేయండి.","కొద్దిగా నీరు పోసి మెత్తగా రుబ్బండి.","మీకు నచ్చిన చిక్కదనం వచ్చేలా నీరు కలపండి.","చిన్న బాణలిలో ఒక టీ స్పూన్ నూనె వేడి చేయండి.","ఆవాలు, కరివేపాకు వేసి చిటపటలాడించండి.","ఈ తాలింపును చట్నీలో వేసి కలపండి."],
-tip:"Add water little by little while grinding. Fresh coconut gives the best flavour.",
-teTip:"చట్నీ రుబ్బేటప్పుడు నీటిని కొద్దికొద్దిగా కలపండి. తాజా కొబ్బరితో చేస్తే మంచి రుచి వస్తుంది."
+ image:"images/coconut-chutney.png",
+
+ ingredients:[
+  "1 cup fresh grated coconut",
+  "2 tbsp roasted gram (putnalu)",
+  "4 green chilli",
+  "Salt to taste",
+  "½ cup water",
+  "For tempering:",
+  "1 tsp oil",
+  "½ tsp mustard seeds",
+  "½ tsp jeera (cumin seeds)",
+  "½ tsp split urad dal",
+  "½ tsp chana dal",
+  "Curry leaves"
+ ],
+
+ teIngredients:[
+  "1 కప్పు తురిమిన కొబ్బరి",
+  "2 టేబుల్ స్పూన్ల పుట్నాలు",
+  "4 పచ్చిమిర్చి",
+  "తగినంత ఉప్పు",
+  "½ కప్పు నీరు",
+  "తాలింపు కోసం:",
+  "1 టీ స్పూన్ నూనె",
+  "½ టీ స్పూన్ ఆవాలు",
+  "½ టీ స్పూన్ జీలకర్ర",
+  "½ టీ స్పూన్ మినప్పప్పు",
+  "½ టీ స్పూన్ శనగపప్పు",
+  "కరివేపాకు"
+ ],
+
+ steps:[
+  "Add coconut, roasted gram, green chilli and salt to a mixer jar.",
+  "Add a little water and grind to a smooth paste.",
+  "Adjust water to get your preferred consistency.",
+  "Heat a teaspoon of oil in a small pan.",
+    "Add  split urad dal and chana dal. Fry until the dals turn light golden.",
+	"Add jeera,mustard seeds and let them splutter.",
+  "Add curry leaves and sauté briefly.",
+  "Pour the tempering over the chutney and mix well."
+ ],
+
+ teSteps:[
+  "కొబ్బరి, పుట్నాలు, పచ్చిమిర్చి,  ఉప్పు మిక్సీ జార్‌లో వేయండి.",
+  "కొద్దిగా నీరు పోసి మెత్తగా రుబ్బండి.",
+  "మీకు నచ్చిన చిక్కదనం వచ్చేలా నీరు కలపండి.",
+  "చిన్న బాణలిలో ఒక టీ స్పూన్ నూనె వేడి చేయండి.",
+  " మినప్పప్పు, శనగపప్పు వేసి పప్పులు లేత బంగారు రంగులోకి వచ్చే వరకు వేయించండి.",
+    "జీలకర్ర,ఆవాలు వేసి చిటపటలాడనివ్వండి.",
+  "కరివేపాకు వేసి కొద్దిసేపు వేయించండి.",
+  "ఈ తాలింపును చట్నీలో వేసి బాగా కలపండి."
+ ],
+
+ tip:"Add water little by little while grinding. Fresh coconut gives the best flavour.",
+ teTip:"చట్నీ రుబ్బేటప్పుడు నీటిని కొద్దికొద్దిగా కలపండి. తాజా కొబ్బరితో చేస్తే మంచి రుచి వస్తుంది."
 },
+
 {
  id:6, category:"Drinks", time:"5 min", level:"Easy",prepTime:"5 min", servings:2,
  title:"Sweet Lassi", teTitle:"తీపి లస్సీ",
@@ -225,12 +275,14 @@ teTip:"మంచి రుచి కోసం తాజా పెరుగు �
  description:"A nutritious green gram dosa, delicious with ginger chutney.",
  teDescription:"పెసరపప్పుతో చేసే పోషకమైన అల్పాహారం. అల్లం చట్నీతో రుచిగా ఉంటుంది.",
 image:"https://lh3.googleusercontent.com/pw/AP1GczOhX37vC_Mpl_teJqGpTXbi14N-hPof-EtXLhXOVNNd9iAkP5hvN6QI-2QGduCmo6s8RKrgPLfkBcvxntDsFWANtk4IIwnhxwzf5D8-MQZc7X5pFY8LpT6Mgy6Zy6wq4TPKmq5NjHJdQY1ijlHlcsff=w1331-h998-s-no-gm",
- ingredients:["1 cup whole green gram (pesalu)","2 tbsp raw rice","1 green chilli","1 inch ginger","½ tsp cumin seeds","Salt to taste","Oil for cooking"],
- teIngredients:["1 కప్పు పచ్చ పెసలు","2 టేబుల్ స్పూన్ల బియ్యం","1 పచ్చిమిర్చి","1 అంగుళం అల్లం ముక్క","½ టీ స్పూన్ జీలకర్ర","తగినంత ఉప్పు","వేయించడానికి నూనె"],
- steps:["Wash green gram and rice. Soak them in water for 6 hours or overnight.","Drain the water and add green gram, rice, chilli, ginger and cumin to a mixer.","Grind into a smooth batter, adding water as needed.","Add salt and mix well.","Heat a dosa pan and spread one ladle of batter into a thin circle.","Add a little oil and cook both sides until golden. Serve hot."],
- teSteps:["పెసలు, బియ్యం కడిగి 6 గంటలు లేదా రాత్రంతా నానబెట్టండి.","నీరు వంపేసి పెసలు, బియ్యం, మిర్చి, అల్లం, జీలకర్ర మిక్సీలో వేయండి.","అవసరమైనంత నీరు పోసి మెత్తగా రుబ్బండి.","ఉప్పు వేసి బాగా కలపండి.","దోసె పెనం వేడి చేసి ఒక గరిటె పిండి పలుచగా పరచండి.","కొద్దిగా నూనె వేసి రెండు వైపులా బంగారు రంగు వచ్చే వరకు కాల్చండి."],
+ ingredients:["1 cup whole green gram (pesalu)","2 tbsp raw rice","5 green chilli","1 inch ginger","½ tsp cumin seeds","Salt to taste","Oil for cooking"],
+ teIngredients:["1 కప్పు పచ్చ పెసలు","2 టేబుల్ స్పూన్ల బియ్యం","5 పచ్చిమిర్చి","1 అంగుళం అల్లం ముక్క","½ టీ స్పూన్ జీలకర్ర","తగినంత ఉప్పు","వేయించడానికి నూనె"],
+ steps:["Wash green gram and rice. Soak them in water for 6 hours or overnight.","Drain the water and add green gram, rice, chilli, ginger and cumin to a mixer.","Grind into a smooth batter, adding water as needed. Adjust the number of green chillies according to your spice preference.","Add salt and mix well.","Heat a dosa pan and spread one ladle of batter into a thin circle.","Add a little oil and cook both sides until golden. Serve hot."],
+ teSteps:["పెసలు, బియ్యం కడిగి 6 గంటలు లేదా రాత్రంతా నానబెట్టండి.","నీరు వంపేసి పెసలు, బియ్యం, మిర్చి, అల్లం, జీలకర్ర మిక్సీలో వేయండి.","అవసరమైనంత నీరు పోసి మెత్తగా రుబ్బండి. మీకు కావలసిన కారం స్థాయిని బట్టి పచ్చిమిర్చి పరిమాణాన్ని సర్దుబాటు చేసుకోండి.","ఉప్పు వేసి బాగా కలపండి.","దోసె పెనం వేడి చేసి ఒక గరిటె పిండి పలుచగా పరచండి.","కొద్దిగా నూనె వేసి రెండు వైపులా బంగారు రంగు వచ్చే వరకు కాల్చండి."],
 tip:"For crisp pesarattu, spread the batter thinly on a properly heated pan.",
-teTip:"కరకరలాడే పెసరట్టు కోసం వేడైన పెనంపై పిండిని పలుచగా, సమానంగా పరచండి."
+tip:"Use fewer or more green chillies according to your spice preference.",
+teTip:"కరకరలాడే పెసరట్టు కోసం వేడైన పెనంపై పిండిని పలుచగా, సమానంగా పరచండి.",
+teTip:"మీ కారం అభిరుచిని బట్టి పచ్చిమిర్చులను తగ్గించుకోవచ్చు లేదా పెంచుకోవచ్చు."
 },
 {
  id:8, category:"Dal", time:"30 min", level:"Easy",prepTime:"10 min", servings:3,
@@ -238,21 +290,22 @@ teTip:"కరకరలాడే పెసరట్టు కోసం వేడ�
  description:"A comforting Andhra-style tomato dal that tastes wonderful with hot rice.",
  teDescription:"వేడి అన్నంతో ఎంతో రుచిగా ఉండే  టమాట పప్పు.",
 image:"images/tomato-pappu.png",
- ingredients:["½ cup toor dal (kandi pappu)","2 medium tomatoes, chopped","1 small onion, chopped","2 green chillies","¼ tsp turmeric","½ tsp chilli powder","½ tsp mustard seeds","½ tsp cumin seeds","Curry leaves","1 tbsp oil or ghee","Salt to taste"],
- teIngredients:["½ కప్పు కందిపప్పు","2 మధ్యస్థ టమాటాలు","1 చిన్న ఉల్లిపాయ","2 పచ్చిమిర్చి","¼ టీ స్పూన్ పసుపు","½ టీ స్పూన్ కారం","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ జీలకర్ర","కరివేపాకు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
+ ingredients:["½ cup toor dal (kandi pappu)","2 medium tomatoes, chopped","1 small onion, chopped","4 green chillies","¼ tsp turmeric","½ tsp chilli powder","½ tsp mustard seeds","½ tsp cumin seeds","Curry leaves","1 tbsp oil or ghee","Salt to taste"],
+ teIngredients:["½ కప్పు కందిపప్పు","2 మధ్యస్థ టమాటాలు","1 చిన్న ఉల్లిపాయ","4 పచ్చిమిర్చి","¼ టీ స్పూన్ పసుపు","½ టీ స్పూన్ కారం","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ జీలకర్ర","కరివేపాకు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
  steps:["Wash the toor dal and add it to a pressure cooker with tomatoes, turmeric and 1½ cups water.","Pressure cook until the dal becomes soft. Allow the pressure to release naturally.","Mash the cooked dal gently.","Heat oil or ghee in a pan. Add mustard seeds and cumin seeds.","Add green chillies, onion and curry leaves. Cook until the onion softens.","Add chilli powder, mashed dal, salt and water as needed.","Simmer for 5 minutes and serve hot with rice."],
  teSteps:["కందిపప్పు కడిగి టమాటాలు, పసుపు, 1½ కప్పుల నీటితో కుక్కర్‌లో వేయండి.","పప్పు మెత్తగా ఉడికే వరకు ప్రెషర్ కుక్ చేయండి. ప్రెషర్ పూర్తిగా తగ్గిన తర్వాత తెరవండి.","ఉడికిన పప్పును మెత్తగా మెదపండి.","బాణలిలో నూనె లేదా నెయ్యి వేడి చేసి ఆవాలు, జీలకర్ర వేయండి.","పచ్చిమిర్చి, ఉల్లిపాయ, కరివేపాకు వేసి వేయించండి.","కారం, మెదిపిన పప్పు, ఉప్పు వేసి అవసరమైనంత నీరు కలపండి.","5 నిమిషాలు మరిగించి వేడి అన్నంతో వడ్డించండి."],
 tip:"Adjust the water according to your preferred dal consistency. A little ghee makes it extra tasty.",
 teTip:"మీకు నచ్చిన పప్పు చిక్కదనాన్ని బట్టి నీటిని కలపండి. కొద్దిగా నెయ్యి వేస్తే మరింత రుచిగా ఉంటుంది."
 },
+
 {
  id:9, category:"Snacks", time:"20 min", level:"Easy",prepTime:"10 min", servings:2,
  title:"Crispy Onion Pakodi", teTitle:"కరకరలాడే ఉల్లిపాయ పకోడీ",
  description:"A crunchy tea-time snack made with onions and gram flour.",
  teDescription:"ఉల్లిపాయలు, శెనగపిండితో చేసే కరకరలాడే సాయంత్రపు చిరుతిండి.",
 image:"images/onion-pakodi.png",
- ingredients:["2 medium onions, thinly sliced","¾ cup gram flour (besan)","2 tbsp rice flour","1 green chilli, chopped","½ tsp chilli powder","A pinch of turmeric","A few curry leaves","Salt to taste","Water as needed","Oil for deep frying"],
- teIngredients:["2 మధ్యస్థ ఉల్లిపాయలు, సన్నగా కోసినవి","¾ కప్పు శెనగపిండి","2 టేబుల్ స్పూన్ల బియ్యప్పిండి","1 పచ్చిమిర్చి, తరిగినది","½ టీ స్పూన్ కారం","చిటికెడు పసుపు","కొద్దిగా కరివేపాకు","తగినంత ఉప్పు","అవసరమైనంత నీరు","వేయించడానికి నూనె"],
+ ingredients:["2 medium onions, thinly sliced","¾ cup gram flour (besan)","2 tbsp rice flour","2 green chilli, chopped","½ tsp chilli powder","A pinch of turmeric","A few curry leaves","Salt to taste","Water as needed","Oil for deep frying"],
+ teIngredients:["2 మధ్యస్థ ఉల్లిపాయలు, సన్నగా కోసినవి","¾ కప్పు శెనగపిండి","2 టేబుల్ స్పూన్ల బియ్యప్పిండి","2 పచ్చిమిర్చి, తరిగినది","½ టీ స్పూన్ కారం","చిటికెడు పసుపు","కొద్దిగా కరివేపాకు","తగినంత ఉప్పు","అవసరమైనంత నీరు","వేయించడానికి నూనె"],
  steps:["Place sliced onions in a bowl with salt. Mix and rest for 5 minutes.","Add green chilli, curry leaves, chilli powder and turmeric.","Add gram flour and rice flour. Mix well.","Sprinkle a little water only if needed to bind the mixture.","Heat oil in a deep pan on medium heat.","Drop small portions of the mixture carefully into the hot oil.","Fry until golden and crisp. Drain and serve hot."],
  teSteps:["కోసిన ఉల్లిపాయలను గిన్నెలో వేసి ఉప్పు కలిపి 5 నిమిషాలు ఉంచండి.","పచ్చిమిర్చి, కరివేపాకు, కారం, పసుపు వేయండి.","శెనగపిండి, బియ్యప్పిండి వేసి బాగా కలపండి.","మిశ్రమం కలిసేలా అవసరమైతే మాత్రమే కొద్దిగా నీరు చల్లండి.","లోతైన బాణలిలో మధ్యస్థ మంటపై నూనె వేడి చేయండి.","మిశ్రమాన్ని చిన్న చిన్న భాగాలుగా జాగ్రత్తగా వేడి నూనెలో వేయండి.","బంగారు రంగులోకి వచ్చి కరకరలాడే వరకు వేయించి వడ్డించండి."],
  tip:"Do not add too much water. A thick mixture helps make crisp pakodi. Be careful when frying in hot oil.",
