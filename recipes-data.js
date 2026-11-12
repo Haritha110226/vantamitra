@@ -221,7 +221,7 @@ teTip:"మంచి రుచి కోసం తాజా పెరుగు �
 },
 {
  id:7, category:"Breakfast", time:"6 hr + 20 min", level:"Easy",prepTime:"10 min", servings:2,
- title:"Andhra Pesarattu", teTitle:"ఆంధ్ర పెసరట్టు",
+ title:"Pesarattu", teTitle:"పెసరట్టు",
  description:"A nutritious green gram dosa, delicious with ginger chutney.",
  teDescription:"పెసరపప్పుతో చేసే పోషకమైన అల్పాహారం. అల్లం చట్నీతో రుచిగా ఉంటుంది.",
 image:"https://lh3.googleusercontent.com/pw/AP1GczOhX37vC_Mpl_teJqGpTXbi14N-hPof-EtXLhXOVNNd9iAkP5hvN6QI-2QGduCmo6s8RKrgPLfkBcvxntDsFWANtk4IIwnhxwzf5D8-MQZc7X5pFY8LpT6Mgy6Zy6wq4TPKmq5NjHJdQY1ijlHlcsff=w1331-h998-s-no-gm",
@@ -234,9 +234,9 @@ teTip:"కరకరలాడే పెసరట్టు కోసం వేడ�
 },
 {
  id:8, category:"Dal", time:"30 min", level:"Easy",prepTime:"10 min", servings:3,
- title:"Andhra Tomato Pappu", teTitle:"ఆంధ్ర టమాట పప్పు",
+ title:"Tomato Pappu", teTitle:" టమాట పప్పు",
  description:"A comforting Andhra-style tomato dal that tastes wonderful with hot rice.",
- teDescription:"వేడి అన్నంతో ఎంతో రుచిగా ఉండే ఆంధ్ర టమాట పప్పు.",
+ teDescription:"వేడి అన్నంతో ఎంతో రుచిగా ఉండే  టమాట పప్పు.",
 image:"images/tomato-pappu.png",
  ingredients:["½ cup toor dal (kandi pappu)","2 medium tomatoes, chopped","1 small onion, chopped","2 green chillies","¼ tsp turmeric","½ tsp chilli powder","½ tsp mustard seeds","½ tsp cumin seeds","Curry leaves","1 tbsp oil or ghee","Salt to taste"],
  teIngredients:["½ కప్పు కందిపప్పు","2 మధ్యస్థ టమాటాలు","1 చిన్న ఉల్లిపాయ","2 పచ్చిమిర్చి","¼ టీ స్పూన్ పసుపు","½ టీ స్పూన్ కారం","½ టీ స్పూన్ ఆవాలు","½ టీ స్పూన్ జీలకర్ర","కరివేపాకు","1 టేబుల్ స్పూన్ నూనె లేదా నెయ్యి","తగినంత ఉప్పు"],
@@ -443,11 +443,11 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
   prepTime: "20 min",
   servings: 4,
 
-  title: "Andhra Crispy Chegodilu",
-  teTitle: "ఆంధ్ర క్రిస్పీ చెగోడీలు",
+  title: " Crispy Chegodilu",
+  teTitle: "క్రిస్పీ చెగోడీలు",
 
   description: "Traditional Andhra-style crispy Chegodilu made with rice flour, roasted chana dal powder, sesame seeds and aromatic spices. A crunchy homemade snack perfect for tea time and festivals.",
-  teDescription: "బియ్యప్పిండి, వేయించిన శెనగపిండి, నువ్వులు మరియు సువాసనగల మసాలాలతో తయారుచేసే సాంప్రదాయ ఆంధ్ర క్రిస్పీ చెగోడీలు. టీ సమయానికి మరియు పండుగలకు చక్కని ఇంటి చిరుతిండి.",
+  teDescription: "బియ్యప్పిండి, వేయించిన శెనగపిండి, నువ్వులు మరియు సువాసనగల మసాలాలతో తయారుచేసే సాంప్రదాయ  క్రిస్పీ చెగోడీలు. టీ సమయానికి మరియు పండుగలకు చక్కని ఇంటి చిరుతిండి.",
 
   image: "images/chegodilu.png",
 
