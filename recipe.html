@@ -181,7 +181,10 @@ if (canonicalUrl) {
     window.location.origin + window.location.pathname + "?recipe=" + r.id
   );
 }
-const pageUrl = window.location.href;
+const pageUrl =
+  window.location.origin +
+  window.location.pathname +
+  "?recipe=" + r.id;
 const imageUrl = new URL(r.image, window.location.href).href;
 
 document.querySelector('meta[property="og:title"]')
