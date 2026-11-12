@@ -272,9 +272,9 @@ teTip:"మంచి రుచి కోసం తాజా పెరుగు �
 {
  id:7, category:"Breakfast", time:"6 hr + 20 min", level:"Easy",prepTime:"10 min", servings:2,
  title:"Pesarattu", teTitle:"పెసరట్టు",
- description:"A nutritious green gram dosa, delicious with ginger chutney.",
- teDescription:"పెసరపప్పుతో చేసే పోషకమైన అల్పాహారం. అల్లం చట్నీతో రుచిగా ఉంటుంది.",
-image:"https://lh3.googleusercontent.com/pw/AP1GczOhX37vC_Mpl_teJqGpTXbi14N-hPof-EtXLhXOVNNd9iAkP5hvN6QI-2QGduCmo6s8RKrgPLfkBcvxntDsFWANtk4IIwnhxwzf5D8-MQZc7X5pFY8LpT6Mgy6Zy6wq4TPKmq5NjHJdQY1ijlHlcsff=w1331-h998-s-no-gm",
+ description:"Learn how to prepare fresh Pesarattu batter using whole green gram and rice. Follow simple soaking and grinding steps to make delicious homemade Pesarattu, best served with ginger chutney.",
+teDescription:"పచ్చ పెసలు, బియ్యంతో పెసరట్టు పిండిని ఎలా తయారు చేయాలో తెలుసుకోండి. నానబెట్టడం నుంచి మెత్తగా రుబ్బడం వరకు సులభమైన విధానాన్ని అనుసరించి రుచికరమైన పెసరట్లు తయారు చేసుకోండి. అల్లం చట్నీతో వడ్డించండి.",
+image:"images/Pesarttu.png",
  ingredients:["1 cup whole green gram (pesalu)","2 tbsp raw rice","5 green chilli","1 inch ginger","½ tsp cumin seeds","Salt to taste","Oil for cooking"],
  teIngredients:["1 కప్పు పచ్చ పెసలు","2 టేబుల్ స్పూన్ల బియ్యం","5 పచ్చిమిర్చి","1 అంగుళం అల్లం ముక్క","½ టీ స్పూన్ జీలకర్ర","తగినంత ఉప్పు","వేయించడానికి నూనె"],
  steps:["Wash green gram and rice. Soak them in water for 6 hours or overnight.","Drain the water and add green gram, rice, chilli, ginger and cumin to a mixer.","Grind into a smooth batter, adding water as needed. Adjust the number of green chillies according to your spice preference.","Add salt and mix well.","Heat a dosa pan and spread one ladle of batter into a thin circle.","Add a little oil and cook both sides until golden. Serve hot."],
