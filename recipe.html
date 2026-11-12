@@ -17,6 +17,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recipe | VantaMitra – వంటమిత్ర</title>
 <meta name="description" content="Explore easy homemade recipes in English and Telugu with step-by-step cooking instructions.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VantaMitra | వంటమిత్ర">
+<meta property="og:description" content="Explore delicious homemade recipes in English and Telugu.">
+<meta property="og:image" content="https://haritha110226.github.io/vantamitra/images/vantamitra-banner.png">
+<meta property="og:url" content="https://haritha110226.github.io/vantamitra/recipe.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VantaMitra | వంటమిత్ర">
+<meta name="twitter:description" content="Explore delicious homemade recipes in English and Telugu.">
+<meta name="twitter:image" content="https://haritha110226.github.io/vantamitra/images/vantamitra-banner.png">
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#faf7ef;color:#263b2d;font-family:Arial,sans-serif;line-height:1.6}
@@ -156,12 +166,35 @@ function renderRecipe(){
   const tip = language === "en" ? r.tip : (r.teTip || r.tip);
 
   document.documentElement.lang = language;
-  document.title = title + " | VantaMitra – వంటమిత్ర";
+document.title = title + " Recipe in English & Telugu | VantaMitra – వంటమిత్ర";
   const metaDescription = document.querySelector('meta[name="description"]');
 
 if (metaDescription) {
   metaDescription.setAttribute("content", description);
-}
+} 
+const pageUrl = window.location.href;
+const imageUrl = new URL(r.image, window.location.href).href;
+
+document.querySelector('meta[property="og:title"]')
+  ?.setAttribute("content", title + " Recipe | VantaMitra");
+
+document.querySelector('meta[property="og:description"]')
+  ?.setAttribute("content", description);
+
+document.querySelector('meta[property="og:image"]')
+  ?.setAttribute("content", imageUrl);
+
+document.querySelector('meta[property="og:url"]')
+  ?.setAttribute("content", pageUrl);
+
+document.querySelector('meta[name="twitter:title"]')
+  ?.setAttribute("content", title + " Recipe | VantaMitra");
+
+document.querySelector('meta[name="twitter:description"]')
+  ?.setAttribute("content", description);
+
+document.querySelector('meta[name="twitter:image"]')
+  ?.setAttribute("content", imageUrl);
 
   document.getElementById("languageButton").textContent =
     language === "en" ? "తెలుగు" : "English";
