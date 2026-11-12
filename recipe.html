@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recipe | VantaMitra – వంటమిత్ర</title>
 <meta name="description" content="Explore easy homemade recipes in English and Telugu with step-by-step cooking instructions.">
+<link rel="canonical" href="https://haritha110226.github.io/vantamitra/recipe.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VantaMitra | వంటమిత్ర">
 <meta property="og:description" content="Explore delicious homemade recipes in English and Telugu.">
@@ -172,6 +173,14 @@ document.title = title + " Recipe in English & Telugu | VantaMitra – వంట
 if (metaDescription) {
   metaDescription.setAttribute("content", description);
 } 
+const canonicalUrl = document.querySelector('link[rel="canonical"]');
+
+if (canonicalUrl) {
+  canonicalUrl.setAttribute(
+    "href",
+    window.location.origin + window.location.pathname + "?recipe=" + r.id
+  );
+}
 const pageUrl = window.location.href;
 const imageUrl = new URL(r.image, window.location.href).href;
 
