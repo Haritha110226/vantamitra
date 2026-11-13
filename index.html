@@ -209,6 +209,8 @@ footer p{font-size:13px;color:#c4d0c3;margin-top:6px}
   "description": "Easy homemade South Indian recipes in English and Telugu, with simple ingredients and step-by-step cooking instructions."
 }
 </script>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7b3f20">
 </head>
 <body>
 
@@ -853,6 +855,14 @@ if (sharedRecipeId) {
   }
 }
 </script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("VantaMitra app is ready"))
+      .catch(error => console.error("Service worker error:", error));
+  });
+}
+</script>
 </body>
 </html>
