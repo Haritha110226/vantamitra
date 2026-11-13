@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "vantamitra-v2";
+const CACHE_NAME = "vantamitra-v3";
 
 const FILES_TO_CACHE = [
   "./",
@@ -46,16 +46,44 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
 
+  const requestUrl = new URL(event.request.url);
+
+  // Handle VantaMitra files only
+  if (requestUrl.origin !== self.location.origin) return;
+
   event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        if (response.ok && new URL(event.request.url).origin === self.location.origin) {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+    caches.open(CACHE_NAME).then(async cache => {
+      // Try the cache first, ignoring query parameters
+      const cachedResponse = await cache.match(event.request, {
+        ignoreSearch: true
+      });
+
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      // If not cached, try the internet
+      try {
+        const networkResponse = await fetch(event.request);
+
+        if (networkResponse.ok) {
+          await cache.put(event.request, networkResponse.clone());
         }
-        return response;
-      })
-      .catch(() => caches.match(event.request))
+
+        return networkResponse;
+      } catch (error) {
+        // Show homepage as a fallback for navigation requests
+        if (event.request.mode === "navigate") {
+          const homepage = await cache.match("./index.html");
+          if (homepage) return homepage;
+        }
+
+        return new Response("You are offline. Please reconnect to the internet.", {
+          status: 503,
+          headers: { "Content-Type": "text/plain" }
+        });
+      }
+    })
   );
 });
 
