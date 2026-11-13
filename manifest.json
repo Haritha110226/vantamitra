@@ -2,6 +2,7 @@
 {
   "name": "VantaMitra - వంటమిత్ర",
   "short_name": "VantaMitra",
+  "id": "/vantamitra/index.html",
   "description": "Homemade South Indian recipes in English and Telugu.",
   "start_url": "./index.html",
   "scope": "./",
