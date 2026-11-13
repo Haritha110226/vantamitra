@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "vantamitra-v3";
+const CACHE_NAME = "vantamitra-v4";
 
 const FILES_TO_CACHE = [
   "./",
@@ -38,9 +38,8 @@ self.addEventListener("activate", event => {
           .filter(key => key.startsWith("vantamitra-") && key !== CACHE_NAME)
           .map(key => caches.delete(key))
       )
-    )
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
