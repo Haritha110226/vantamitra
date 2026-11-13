@@ -479,6 +479,17 @@ function toggleFavorite(event, recipeId) {
 
   renderRecipes();
 }
+function getRecipePageUrl(recipe) {
+  const slug = recipe.title
+    .trim()
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+  return `recipe-${slug}.html`;
+}
 function renderRecipes(){
  const term = document.getElementById("searchInput").value.toLowerCase().trim();
  const filtered = recipes.filter(r=>{
@@ -500,8 +511,8 @@ function renderRecipes(){
  filtered.forEach(r=>{
    const card = document.createElement("article");
    card.className = "recipe-card";
-  card.onclick = ()=> {
-  window.location.href = `recipe.html?recipe=${r.id}`;
+card.onclick = ()=> {
+  window.location.href = getRecipePageUrl(r);
 };
    const title = language === "en" ? r.title : r.teTitle;
    const desc = language === "en" ? r.description : r.teDescription;
@@ -634,7 +645,10 @@ function shareRecipe(platform) {
     ? activeRecipe.title
     : activeRecipe.teTitle;
 
-const recipeUrl = "https://haritha110226.github.io/vantamitra/?recipe=" + activeRecipe.id;
+const recipeUrl = new URL(
+  getRecipePageUrl(activeRecipe),
+  "https://haritha110226.github.io/vantamitra/"
+).href;
 
  const message = language === "en"
   ? recipeTitle + " - Try this recipe on VantaMitra!"
