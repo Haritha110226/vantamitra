@@ -130,6 +130,19 @@ const imageUrl = new URL(r.image, window.location.href).href;`;
   const schemaTag = `<script type="application/ld+json">\n${JSON.stringify(buildSchema(recipe), null, 2)}\n</script>`;
   html = html.replace("</head>", `${schemaTag}\n</head>`);
 
+    const serviceWorkerScript = `
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("VantaMitra app is ready"))
+      .catch(error => console.error("Service worker error:", error));
+  });
+}
+</script>`;
+
+  html = html.replace("</body>", `${serviceWorkerScript}\n</body>`);
+  
   return html;
 }
 
