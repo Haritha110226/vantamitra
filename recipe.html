@@ -160,6 +160,10 @@ function renderRecipe(){
   }
 
   const r = activeRecipe;
+  if (r.pageUrl) {
+  document.querySelector('link[rel="canonical"]')
+    ?.setAttribute('href', new URL(r.pageUrl, window.location.origin + "/vantamitra/").href);
+}
   const title = language === "en" ? r.title : r.teTitle;
   const description = language === "en" ? r.description : r.teDescription;
   const ingredients = language === "en" ? r.ingredients : r.teIngredients;
@@ -176,10 +180,11 @@ if (metaDescription) {
 const canonicalUrl = document.querySelector('link[rel="canonical"]');
 
 if (canonicalUrl) {
-  canonicalUrl.setAttribute(
-    "href",
-    window.location.origin + window.location.pathname + "?recipe=" + r.id
-  );
+  const finalCanonical = r.pageUrl
+    ? new URL(r.pageUrl, document.baseURI).href
+    : window.location.origin + window.location.pathname + "?recipe=" + r.id;
+
+  canonicalUrl.setAttribute("href", finalCanonical);
 }
 const pageUrl =
   window.location.origin +
@@ -285,7 +290,8 @@ function shareRecipe(){
 activeRecipe = recipes.find(r => String(r.id) === id);
 if(activeRecipe) currentServings = activeRecipe.servings;
 if (activeRecipe) {
-  const r = activeRecipe;
+  const r = activeRecipe; 
+
 
 const schema = {
   "@context": "https://schema.org",

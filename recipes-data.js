@@ -682,6 +682,7 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
   servings: 2,
 
   title: "VantaMitra Special Uggani",
+  pageUrl: "recipe-vantamitra-special-uggani.html",
   teTitle: "వంటమిత్ర ప్రత్యేక ఉగ్గాని",
 
   description: "A traditional Andhra-style Uggani made with soft puffed rice, roasted chana dal powder, onions, tomatoes, green chillies and aromatic spices. Enjoy it with crispy Mirapakaya Bajji for a delicious combination.",
