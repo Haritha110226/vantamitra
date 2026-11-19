@@ -324,6 +324,7 @@ teTip:"ఎక్కువ నీరు కలపకండి. చిక్కట
   servings: 4,
 
   title: "Traditional Sweet Pongal",
+  pageUrl: "recipe-traditional-sweet-pongal.html",
   teTitle: "సాంప్రదాయ తీపి పొంగలి",
 
   description: "Traditional homemade Sweet Pongal with rice, jaggery, milk, ghee, cashews, raisins and cardamom. Perfect for festivals and Naivedhyam.",
