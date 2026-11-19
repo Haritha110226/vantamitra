@@ -2,8 +2,9 @@ const recipes = [
 {
  id:1, category:"Breakfast", time:"20 min", level:"Easy",
 prepTime:"5 min", servings:2,
- title:"Soft Vegetable Upma", teTitle:"మెత్తని కూరగాయల ఉప్మా",
- description:"A comforting breakfast made with roasted semolina and vegetables.",
+ title:"Soft Vegetable Upma", pageUrl: "recipe-soft-vegetable-upma.html",
+ teTitle:"మెత్తని కూరగాయల ఉప్మా",
+  description:"A comforting breakfast made with roasted semolina and vegetables.",
  teDescription:"రవ్వ, కూరగాయలతో చేసే రుచికరమైన అల్పాహారం.",
 image:"images/vegetable-upma.png",
  ingredients:["1 cup semolina (rava)","2½ cups water","1 small onion, chopped","½ cup mixed vegetables","1 green chilli","1 tsp mustard seeds","1 tbsp oil or ghee","Salt to taste"],
@@ -41,7 +42,9 @@ teTip:"బియ్యం రకం, పాతదా కొత్తదా అ�
 },
 {
  id:10, category:"Rice", time:"35–45 min", level:"Easy", prepTime:"30 min soaking", servings:2,
- title:"Homestyle Bagara Rice", teTitle:"ఇంటి స్టైల్ బగారా రైస్",
+ title:"Homestyle Bagara Rice", 
+ pageUrl: "recipe-homestyle-bagara-rice.html",
+ teTitle:"ఇంటి స్టైల్ బగారా రైస్",
  description:"Aromatic homemade bagara rice prepared with whole spices, onions, green chillies and fresh herbs.",
  teDescription:"సుగంధ ద్రవ్యాలు, ఉల్లిపాయలు, పచ్చిమిర్చి, తాజా ఆకుకూరలతో చేసే రుచికరమైన ఇంటి స్టైల్ బగారా రైస్.",
  image:"images/bagara-rice.png",
@@ -195,7 +198,8 @@ teTip:"బియ్యం రకం, పాతదా కొత్తదా అ�
 },
 {
  id:5, category:"Chutneys", time:"10 min", level:"Easy", prepTime:"5 min", servings:3,
- title:"Coconut Chutney", teTitle:"కొబ్బరి చట్నీ",
+ title:"Coconut Chutney", pageUrl: "recipe-coconut-chutney.html",
+ teTitle:"కొబ్బరి చట్నీ",
  description:"A fresh, creamy South Indian chutney for dosa and idli.",
  teDescription:"ఇడ్లీ, దోసెలకు సరిపోయే తాజా కొబ్బరి చట్నీ.",
  image:"images/coconut-chutney.png",
@@ -258,7 +262,8 @@ teTip:"బియ్యం రకం, పాతదా కొత్తదా అ�
 
 {
  id:6, category:"Drinks", time:"5 min", level:"Easy",prepTime:"5 min", servings:2,
- title:"Sweet Lassi", teTitle:"తీపి లస్సీ",
+ title:"Sweet Lassi", pageUrl: "recipe-sweet-lassi.html",
+ teTitle:"తీపి లస్సీ",
  description:"A cool and creamy yogurt drink for warm afternoons.",
  teDescription:"వేసవి మధ్యాహ్నాలకు చల్లని, రుచికరమైన పెరుగు పానీయం.",
 image:"images/sweet-lassi.jpg",
@@ -580,6 +585,7 @@ teItems: ["10–15 జీడిపప్పులు","2 టీ స్పూన�
   servings: 2,
 
   title: "VantaMitra Homestyle Semiya Upma",
+  pageUrl: "recipe-vantamitra-homestyle-semiya-upma.html",
   teTitle: "వంటమిత్ర ఇంటి స్టైల్ సేమియా ఉప్మా",
 
   description: "A quick homemade semiya upma with roasted vermicelli, crunchy peanuts, lentils, green chillies and aromatic curry leaves. An easy and tasty breakfast for busy mornings.",
